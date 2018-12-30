@@ -33,3 +33,14 @@
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
 
 ## Plot
+
+## Pandas
+* import pandas:
+  - `import pandas as pd`
+
+## Database
+* Import sqlalchemy (can be used with postgreSQL, NoSQL, MongoDB, etc.):
+  - `from sqlalchemy import create_engine`
+
+## References
+* Interactive Data Analysis with Python and Excel - http://pbpython.com/xlwings-pandas-excel.html
