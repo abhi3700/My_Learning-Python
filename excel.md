@@ -37,3 +37,4 @@
 * Combining Data From Multiple Excel Files - http://pbpython.com/excel-file-combine.html
 * Generating Excel Reports from a Pandas Pivot Table - http://pbpython.com/pandas-pivot-report.html
 * Improving Pandas’s Excel Output - http://pbpython.com/improve-pandas-excel-output.html
+* Creating Advanced Excel Workbooks with Python - http://pbpython.com/advanced-excel-workbooks.htmlCreating Advanced Excel Workbooks with Python - 
