@@ -6,7 +6,11 @@
 
 ## Book
 * Calling current book:
-  - `wb = xw.Book.Caller()` 
+  - `wb = xw.Book.Caller()`
+* Calling a book by full name:
+  - `wb = xw.Book(r'C:/path/to/file.xlsx')`
+> NOTE: When specifying file paths on Windows, you should either use raw strings by putting an r in front of the string or use double back-slashes like so: C:\\path\\to\\file.xlsx.
+* [Official link](https://docs.xlwings.org/en/stable/connect_to_workbook.html#python-to-excel)
 
 ## Sheet
 * Add a sheet named 'main' after 'Sheet1': 
