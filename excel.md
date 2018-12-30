@@ -35,3 +35,5 @@
 * Common Excel Tasks Demonstrated in Pandas - http://pbpython.com/excel-pandas-comp.html
 * Common Excel Tasks Demonstrated in Pandas part 2 - http://pbpython.com/excel-pandas-comp-2.html
 * Combining Data From Multiple Excel Files - http://pbpython.com/excel-file-combine.html
+* Generating Excel Reports from a Pandas Pivot Table - http://pbpython.com/pandas-pivot-report.html
+* Improving Pandas’s Excel Output - http://pbpython.com/improve-pandas-excel-output.html
