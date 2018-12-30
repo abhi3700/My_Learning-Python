@@ -27,4 +27,8 @@
   - `Range('A1:B2').value = "abhijit"`  or 
   - `wb.sheets[0].range('A1:B2').value = "abhijit"` or 
   - `wb.sheets['Sheet1'].range('A1:B2').value = "abhijit"`
+* color cell(s):
+  - `Range('A1').color = (0, 255, 0)` or 
+  - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
+  - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
 
