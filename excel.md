@@ -32,3 +32,6 @@
 
 ## References
 * xlwings - https://www.xlwings.org/
+* Common Excel Tasks Demonstrated in Pandas - http://pbpython.com/excel-pandas-comp.html
+* Common Excel Tasks Demonstrated in Pandas part 2 - http://pbpython.com/excel-pandas-comp-2.html
+* Combining Data From Multiple Excel Files - http://pbpython.com/excel-file-combine.html
