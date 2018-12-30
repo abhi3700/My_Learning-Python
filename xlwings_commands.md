@@ -1,4 +1,7 @@
 # xlwings Commands
+<p align="center">
+  <img src="http://pbpython.com/images/article-overview.png" alt="xlwings_infographics" width="550" height="200">
+</p>
 
 ## Header
 * `import xlwings as xw`
