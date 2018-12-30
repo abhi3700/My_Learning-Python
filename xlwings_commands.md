@@ -32,3 +32,4 @@
   - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
 
+## Plot
