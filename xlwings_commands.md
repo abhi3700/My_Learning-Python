@@ -35,6 +35,20 @@
   - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
 
+## Macro
+* Create python User-defined functions (UDFs): <br/>
+  Steps:
+  - Open `.py` file (created during a project quickstart using xlwings)
+  - Follow this code sample to create your UDFs:
+  ```py
+  @xw.func
+  def sumtwice(x, y):
+    return 2 * (x + y)
+  ```
+  - Press this button <kbd>"Import Functions"</kbd> in the `xlwings` tab in Excel Book.
+  - Now access the UDFs from inside a cell.
+  - DONE!!
+
 ## Plot
 
 ## Pandas
