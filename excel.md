@@ -6,6 +6,9 @@
   - `$ conda install xlwings`
   - `$ xlwings quickstart <project-name>`: start a excel with python project. E.g. `$ xlwings quickstart abhi`
   - `$ xlwings addin install`: install xlwings into excel
+  - Enable macro settings in the MS Excel
+    + enable <kbd>Enable all macros</kbd> button in the `Trust Center >> Macro Settings >> Macro Settings`
+    + enable <kbd>Trust access to the VBA project object model</kbd> button in the `Trust Center >> Macro Settings >> Developer Macro Settings`
 
 ## Projects
 * ### Hello:
