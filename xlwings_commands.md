@@ -3,6 +3,8 @@
   <img src="http://pbpython.com/images/article-overview.png" alt="xlwings_infographics" width="550" height="200">
 </p>
 
+## [Installation](https://github.com/abhi3700/My_learning-Python/blob/master/excel.md#installation)
+
 ## Header
 * `import xlwings as xw`
 * `from xlwings import Range, Book`
@@ -45,7 +47,7 @@
   def sumtwice(x, y):
     return 2 * (x + y)
   ```
-  - Press this button <kbd>"Import Functions"</kbd> in the `xlwings` tab in Excel Book.
+  - Press this button <kbd>"Import Functions"</kbd> in the `xlwings` tab in Excel Book. Here, if found error in dialog box, enable <kbd>Trust access to the VBA project object model</kbd> button in the `Trust Center >> Developer Macro Settings`
   - Now access the UDFs from inside a cell.
   - DONE!!
 
