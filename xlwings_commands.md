@@ -37,6 +37,13 @@
   - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
 
+## Date, time
+* Current datetime
+  ```py
+  import datetime as dt
+  dt.datetime.now()
+  ```
+
 ## Macro
 * Create python User-defined functions (UDFs): <br/>
   Steps:
