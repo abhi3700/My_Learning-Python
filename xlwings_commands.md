@@ -24,20 +24,21 @@
   - `wb.sheets.add('pre', before = 'Sheet1')`
 
 ## Cell, Row, Column
-* single cell with a value:
-  - `Range('A1').value = "abhijit"` or 
+* single cell with a value: 
   - `wb.sheets[0].range('A1').value = "abhijit"` or 
   - `wb.sheets['Sheet1'].range('A1').value = "abhijit"` 
 * multiple cells with values:
-  - `Range('A1:B2').value = "abhijit"`  or 
   - `wb.sheets[0].range('A1:B2').value = "abhijit"` or 
   - `wb.sheets['Sheet1'].range('A1:B2').value = "abhijit"`
 * color cell(s):
-  - `Range('A1').color = (0, 255, 0)` or 
   - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
+* color cell as None (no color):
+  - `sht.range('D31').color = None`
 * Autofit column
   - `sht_pr.range('A1:A10').columns.autofit()   # sht_pr - name of a 'practice' sheet`
+* Autofit table from 'A1' to 'Z1600'
+  - `sht_prod.range('A1:Z1600').columns.autofit()`
   
 ## Date, time
 * Current datetime
