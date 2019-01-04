@@ -45,6 +45,13 @@
   import datetime as dt
   dt.datetime.now()
   ```
+* datetime notation [Refer this](http://strftime.org/)
+  ```py
+  import datetime as dt
+  curr_dt = dt.datetime.now()
+  print(curr_dt.strftime("%A"))
+  ```
+
 
 ## Macro
 * Create python User-defined functions (UDFs): <br/>
