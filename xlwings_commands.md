@@ -30,11 +30,21 @@
 * multiple cells with values:
   - `wb.sheets[0].range('A1:B2').value = "abhijit"` or 
   - `wb.sheets['Sheet1'].range('A1:B2').value = "abhijit"`
-* color cell(s):
+* set color cell(s):
   - `wb.sheets[0].range('A1').color = (0, 255, 0)` or 
   - `wb.sheets['Sheet1'].range('A1').color = (0, 255, 0)`
-* color cell as None (no color):
+* set color cell as None (no color):
   - `sht.range('D31').color = None`
+* get color cell
+  ```py
+  if sht_prod.range('A2').color == (153, 204, 0):
+		sht_prod.range('C3').value = "Light Green"
+  ```
+* get color cell as None
+  ```py
+  if sht_prod.range('A2').color is None:
+		sht_prod.range('C3').value = "No color"
+  ```
 * Autofit column
   - `sht_pr.range('A1:A10').columns.autofit()   # sht_pr - name of a 'practice' sheet`
 * Autofit table from 'A1' to 'Z1600'
