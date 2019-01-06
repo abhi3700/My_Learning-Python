@@ -5,6 +5,24 @@
 
 ## [Installation](https://github.com/abhi3700/My_learning-Python/blob/master/excel.md#installation)
 
+## Troubleshooting
+* Sometimes, when Excel macros may not run (while the excel is open) on pressing <kbd>F5</kbd>, then try using this:
+	```vba
+	Private Sub Workbook_Open()
+			mymodule = Left(ThisWorkbook.name, (InStrRev(ThisWorkbook.name, ".", -1, vbTextCompare) - 1))
+			RunPython ("import " & mymodule & ";" & mymodule & ".main()")
+	End Sub
+	```
+	instead of the default code during project generation
+	```vba
+	Sub SampleCall()
+    mymodule = Left(ThisWorkbook.Name, (InStrRev(ThisWorkbook.Name, ".", -1, vbTextCompare) - 1))
+    RunPython ("import " & mymodule & ";" & mymodule & ".hello_xlwings()")
+	End Sub
+	```
+	> Note: Basically, one should use module name as `Workbook_Open()`
+	
+
 ## Header
 * `import xlwings as xw`
 * `from xlwings import Range, Book`
