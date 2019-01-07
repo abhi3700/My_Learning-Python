@@ -2,6 +2,7 @@
 
 ## Installation
 * https://www.anaconda.com/
+* tick the checkbox corresponding to "Add to path". This will enable using `conda` in the terminal.
 
 ## Shortcuts
 * Open Jupyter notebook using `$ jupyter notebook` on terminal (win 10) in a preferable directory.
