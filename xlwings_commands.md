@@ -80,6 +80,14 @@ End Sub
   curr_dt = dt.datetime.now()
   print(curr_dt.strftime("%A"))
   ```
+## Display, Message, Alert
+* [MessageBox](http://docs.activestate.com/activepython/2.4/pywin32/win32api__MessageBox_meth.html)
+```py
+import xlwings as xw
+import win32api
+wb = xw.Book.caller()
+win32api.MessageBox(wb.app.hwnd, "display message", "Title", )
+```
 
 
 ## Macro
