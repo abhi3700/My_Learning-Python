@@ -60,7 +60,7 @@ print(data.tail(6))		# tail of the dataframe
     <summary><b>Output:<b></summary>
 <p>
     
-```
+```bash
           country  year  population
 0     Afghanistan  1952     8425333
 1     Afghanistan  1957     9240934
