@@ -6,7 +6,7 @@
 ## [Installation](https://github.com/abhi3700/My_learning-Python/blob/master/excel.md#installation)
 
 ## Troubleshooting
-* Sometimes, when Excel macros may not run (while the excel is open) on pressing <kbd>F5</kbd>, then try using this:
+* Sometimes, when Excel (in 2016 version) macros may not run (while the excel is open) on pressing <kbd>F5</kbd>, then try using this:
 ```vba
 Private Sub Workbook_Open()
 		mymodule = Left(ThisWorkbook.name, (InStrRev(ThisWorkbook.name, ".", -1, vbTextCompare) - 1))
@@ -22,7 +22,13 @@ End Sub
 ```
 	> Note: Basically, one should use module name as `Workbook_Open()`
 	
-
+* If the `xlwings` tab doesn't appear in Excel, then there might be version incompatibility like 
+	- Latest `Excel` with older `Python` version
+	- Latest `Python` version with older `Excel`
+	
+	Also, Anaconda version incompatibility might be the issue. 
+	> Try using latest versions of all the tools, Latest Anaconda => Python is the latest, also, xlwings is the latest as well.
+	
 ## Header
 * `import xlwings as xw`
 * `from xlwings import Range, Book`
