@@ -119,8 +119,10 @@ win32api.MessageBox(wb.app.hwnd, "display message", "Title", )
 ```py
 df = pd.read_csv('H:\\excel\\abhi\\countries.csv')
 sht_countries = wb.sheets['countries_data']
+# sht_countries.range('A1').value = df		# printing with index col.
 sht_countries.range('A1').options(index= False).value = df 		# printing w/o index col.
 ```
+> NOTE: here the data starts with 'A1' cell
 
 ## Database
 * Import sqlalchemy (can be used with postgreSQL, NoSQL, MongoDB, etc.):
