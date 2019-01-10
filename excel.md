@@ -42,6 +42,8 @@
 ## Shortcut keys
 * <kbd>ctrl + backspace</kbd> - bring the cursor near the word, you get to see the dialog with its features. <br/>
   NOTE: Anaconda package in ST3 has to be installed first.
+* <kbd>shift + F3</kbd> - shows the "Function Wizard" dialog.
+* 
   
 ## Commands, Syntax
 * [Refer this file](https://github.com/abhi3700/My_learning-Python/blob/master/xlwings_commands.md)
