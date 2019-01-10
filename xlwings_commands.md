@@ -115,6 +115,12 @@ win32api.MessageBox(wb.app.hwnd, "display message", "Title", )
 ## Pandas
 * import pandas:
   - `import pandas as pd`
+* printing w/o index column
+```py
+df = pd.read_csv('H:\\excel\\abhi\\countries.csv')
+sht_countries = wb.sheets['countries_data']
+sht_countries.range('A1').options(index= False).value = df 		# printing w/o index col.
+```
 
 ## Database
 * Import sqlalchemy (can be used with postgreSQL, NoSQL, MongoDB, etc.):
