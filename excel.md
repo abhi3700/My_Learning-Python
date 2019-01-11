@@ -10,6 +10,10 @@
     + enable <kbd>Enable all macros</kbd> button in the `Trust Center >> Macro Settings >> Macro Settings`
     + enable <kbd>Trust access to the VBA project object model</kbd> button in the `Trust Center >> Macro Settings >> Developer Macro Settings`
 
+## Usages
+* Freeze row, column 
+  - click a row and do this - "View >> Freeze Panes".
+
 ## Projects
 * ### Hello:
   This prints text - "Hello xlwings!" into A1 cell in sheet 1 of the workbook.
@@ -42,8 +46,7 @@
 ## Shortcut keys
 * <kbd>ctrl + backspace</kbd> - bring the cursor near the word, you get to see the dialog with its features. <br/>
   NOTE: Anaconda package in ST3 has to be installed first.
-* <kbd>shift + F3</kbd> - shows the "Function Wizard" dialog.
-* 
+* <kbd>shift + F3</kbd> - shows the "Function Wizard" dialog. 
   
 ## Commands, Syntax
 * [Refer this file](https://github.com/abhi3700/My_learning-Python/blob/master/xlwings_commands.md)
