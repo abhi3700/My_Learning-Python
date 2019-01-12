@@ -47,6 +47,20 @@ End Sub
 * Add a sheet named 'pre' before 'Sheet1':
   - `wb.sheets.add('pre', before = 'Sheet1')`
 
+## File
+* Read excel file and copy its sheet into current workbook's sheet. <br/>
+	**Code:**
+```py
+excel_file = pd.ExcelFile("H:\\excel\\dryetch\\macro_enabled_logbooks\\ASH09_QC_LOG_BOOK\\ASH09_QC_LOG_BOOK.xlsm")
+df1 = excel_file.parse('ASFE1-ER')
+sht.range('A1').options(index=False).value = df1
+```
+
+#### Description:
+	- While pasting, start cell: A1
+	- Copying the sheet of an Excel file into current workbook's desired sheet
+
+
 ## Cell, Row, Column
 * single cell with a value: 
   - `wb.sheets[0].range('A1').value = "abhijit"` or 
