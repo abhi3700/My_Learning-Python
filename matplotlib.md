@@ -86,3 +86,14 @@
   [Reference](https://stackoverflow.com/a/38251497/6774636)
 * ### Format string characters description
   [Reference](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
+* ### Custom legends
+  ```py
+  # Custom Legends
+  custom_lines = [
+      Line2D([0], [0], color='#FF7F50', lw=4),
+      Line2D([0], [0], color='#0000CD', lw=4),
+      Line2D([0], [0], color='#FF1493', lw=4)        
+      ]
+  ax_cp.legend(custom_lines, ['CP', 'USL', 'UCL'], fontsize=11)        
+  ```
+  [Reference](https://matplotlib.org/gallery/text_labels_and_annotations/custom_legends.html)
