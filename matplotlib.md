@@ -84,3 +84,5 @@
   pylab.rcParams.update(params)
   ```
   [Reference](https://stackoverflow.com/a/38251497/6774636)
+* ### Format string characters description
+  [Reference](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
