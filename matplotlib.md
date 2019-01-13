@@ -28,3 +28,9 @@
   - `x = [1, 2, 3, 4]`
   - `y = [1, 4, 9, 16]`  
   
+* ### Plot linestyle, marker, color
+  ```py
+  plt.plot(df_er["Date (MM/DD/YY)"], df_er["Etch Rate (A/Min)"], linestyle='-', marker='o', color='b')
+  
+  ```
+  [Reference](https://stackoverflow.com/questions/8409095/matplotlib-set-markers-for-individual-points-on-a-line/8409110#8409110)
