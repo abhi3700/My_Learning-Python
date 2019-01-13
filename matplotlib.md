@@ -52,3 +52,15 @@
   ```
   [matplotlib.dates API](https://matplotlib.org/api/dates_api.html) <br/>
   [Refer 1](https://stackoverflow.com/questions/43968985/changing-the-formatting-of-a-datetime-axis-in-matplotlib/43969357#43969357), [Refer 2](https://scentellegher.github.io/programming/2017/05/24/pandas-bar-plot-with-formatted-dates.html)
+* ### Major and Minor ticks on the axes
+  ```py
+  # Major ticks every 20, minor ticks every 5
+  major_ticks = np.arange(0, 101, 20)
+  minor_ticks = np.arange(0, 101, 5)
+
+  ax.set_xticks(major_ticks)
+  ax.set_xticks(minor_ticks, minor=True)
+  ax.set_yticks(major_ticks)
+  ax.set_yticks(minor_ticks, minor=True)
+  ```
+  [Reference](https://stackoverflow.com/a/24953575/6774636)
