@@ -31,6 +31,24 @@
 * ### Plot linestyle, marker, color
   ```py
   plt.plot(df_er["Date (MM/DD/YY)"], df_er["Etch Rate (A/Min)"], linestyle='-', marker='o', color='b')
-  
   ```
   [Reference](https://stackoverflow.com/questions/8409095/matplotlib-set-markers-for-individual-points-on-a-line/8409110#8409110)
+* ### Date formatting in x-axis
+  ```py
+  import matplotlib.dates as mdates
+  monthyearFmt = mdates.DateFormatter('%Y-%b')          # formatting as 2017-Jan
+  ax1.xaxis.set_major_formatter(monthyearFmt)
+  _ = plt.xticks(rotation=90)                           # rotating 90 counterclockwise
+  ax1.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=MO, interval=2))          # set ticks every 2nd Monday
+  ```
+  
+  [Date picks](https://matplotlib.org/api/dates_api.html#date-tickers)
+  ```md
+  // Date notation
+  %Y - 2017
+  %B - January
+  %b - Jan
+  %d - 21
+  ```
+  [matplotlib.dates API](https://matplotlib.org/api/dates_api.html) <br/>
+  [Refer 1](https://stackoverflow.com/questions/43968985/changing-the-formatting-of-a-datetime-axis-in-matplotlib/43969357#43969357), [Refer 2](https://scentellegher.github.io/programming/2017/05/24/pandas-bar-plot-with-formatted-dates.html)
