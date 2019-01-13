@@ -33,6 +33,7 @@
   plt.plot(df_er["Date (MM/DD/YY)"], df_er["Etch Rate (A/Min)"], linestyle='-', marker='o', color='b')
   ```
   [Reference](https://stackoverflow.com/questions/8409095/matplotlib-set-markers-for-individual-points-on-a-line/8409110#8409110)
+  [color codes](https://www.rapidtables.com/web/color/html-color-codes.html)
 * ### Date formatting in x-axis
   ```py
   import matplotlib.dates as mdates
@@ -64,3 +65,10 @@
   ax.set_yticks(minor_ticks, minor=True)
   ```
   [Reference](https://stackoverflow.com/a/24953575/6774636)
+* ### Multiple plots on a single x-axis
+  ```py
+  plt.plot(df_er["Date (MM/DD/YY)"], df_er["Etch Rate (A/Min)"], linestyle='-', marker='o', markerfacecolor='#008000', color='#FF7F50')    # plot date vs ER
+  plt.plot(df_er["Date (MM/DD/YY)"], df_er["LSL"], linestyle='-', color='#0000CD')        # plot date vs LSL
+  plt.plot(df_er["Date (MM/DD/YY)"], df_er["LCL"], linestyle='-', color='#FF1493')        # plot date vs LCL 
+  plt.plot(df_er["Date (MM/DD/YY)"], df_er["UCL"], linestyle='-', color='#FF1493')        # plot date vs UCL
+  ```
