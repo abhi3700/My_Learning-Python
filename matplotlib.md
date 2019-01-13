@@ -72,3 +72,15 @@
   plt.plot(df_er["Date (MM/DD/YY)"], df_er["LCL"], linestyle='-', color='#FF1493')        # plot date vs LCL 
   plt.plot(df_er["Date (MM/DD/YY)"], df_er["UCL"], linestyle='-', color='#FF1493')        # plot date vs UCL
   ```
+* ### Labels font size
+  ```py
+  import matplotlib.pylab as pylab
+  params = {'legend.fontsize': 'x-large',
+            'figure.figsize': (15, 5),
+           'axes.labelsize': 'x-large',
+           'axes.titlesize':'x-large',
+           'xtick.labelsize':'x-large',
+           'ytick.labelsize':'x-large'}
+  pylab.rcParams.update(params)
+  ```
+  [Reference](https://stackoverflow.com/a/38251497/6774636)
