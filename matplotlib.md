@@ -97,3 +97,14 @@
   ax_cp.legend(custom_lines, ['CP', 'USL', 'UCL'], fontsize=11)        
   ```
   [Reference](https://matplotlib.org/gallery/text_labels_and_annotations/custom_legends.html)
+* ### Annotations on hovering over a plot
+```py
+df_cp = sht_asfe1_cp.range('A10').options(
+        pd.DataFrame, header=1, index=False, expand='table'
+        ).value											                # fetch the data from sheet- 'ASFE1-CP'
+df_cp['Remarks'].fillna('NIL', inplace=True)      # replacing the empty cells with 'NIL'
+df_cp = df_cp[["Date (MM/DD/YY)", "delta CP", "USL", "UCL", "Remarks"]]        # The final dataframe with required columns
+lines = ax_cp.plot(df_cp["Date (MM/DD/YY)"], df_cp["delta CP"], visible=False)
+datacursor(lines, hover=True, point_labels=df_cp['Remarks'])
+plt.show()      # this would activate hover 
+```
