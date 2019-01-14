@@ -98,13 +98,20 @@
   ```
   [Reference](https://matplotlib.org/gallery/text_labels_and_annotations/custom_legends.html)
 * ### Annotations on hovering over a plot
-```py
-df_cp = sht_asfe1_cp.range('A10').options(
-        pd.DataFrame, header=1, index=False, expand='table'
-        ).value											                # fetch the data from sheet- 'ASFE1-CP'
-df_cp['Remarks'].fillna('NIL', inplace=True)      # replacing the empty cells with 'NIL'
-df_cp = df_cp[["Date (MM/DD/YY)", "delta CP", "USL", "UCL", "Remarks"]]        # The final dataframe with required columns
-lines = ax_cp.plot(df_cp["Date (MM/DD/YY)"], df_cp["delta CP"], visible=False)
-datacursor(lines, hover=True, point_labels=df_cp['Remarks'])
-plt.show()      # this would activate hover 
-```
+  ```py
+  from mpldatacursor import datacursor
+  df_cp = sht_asfe1_cp.range('A10').options(
+          pd.DataFrame, header=1, index=False, expand='table'
+          ).value											                # fetch the data from sheet- 'ASFE1-CP'
+  df_cp['Remarks'].fillna('NIL', inplace=True)      # replacing the empty cells with 'NIL'
+  df_cp = df_cp[["Date (MM/DD/YY)", "delta CP", "USL", "UCL", "Remarks"]]        # The final dataframe with required columns
+  lines = ax_cp.plot(df_cp["Date (MM/DD/YY)"], df_cp["delta CP"], visible=False)
+  datacursor(lines, hover=True, point_labels=df_cp['Remarks'])
+  plt.show()      # this would activate hover 
+  ```
+  > NOTE: The 'Remarks' column cannot have value as 0 or empty cells. So, fill empty cells with 'NIL'
+  
+  **Packages:**
+  - [mpldatacursor](https://anaconda.org/BjornFJohansson/mpldatacursor)  [RECOMMENDED]
+  - [mplcursor](https://anaconda.org/conda-forge/mplcursors)  [A FORK of mpldatacursor]
+  - [mpld3](https://mpld3.github.io/index.html)
