@@ -111,6 +111,10 @@
   ```
   > NOTE: The 'Remarks' column cannot have value as 0 or empty cells. So, fill empty cells with 'NIL'
   
+  **References**:
+  - [How to show data labels .....](https://stackoverflow.com/questions/21998663/how-to-show-data-labels-when-you-mouse-over-data/22002324#22002324)
+  - [Scatter plot with cursor](https://mpld3.github.io/examples/scatter_tooltip.html)
+  
   **Packages:**
   - [mpldatacursor](https://anaconda.org/BjornFJohansson/mpldatacursor)  [RECOMMENDED]
   - [mplcursor](https://anaconda.org/conda-forge/mplcursors)  [A FORK of mpldatacursor]
