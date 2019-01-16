@@ -28,7 +28,13 @@ End Sub
 	
 	Also, Anaconda version incompatibility might be the issue. 
 	> Try using latest versions of all the tools, Latest Anaconda => Python is the latest, also, xlwings is the latest as well.
-	
+* If there is any error like this:
+	```
+	Error 440:
+	Automation error
+	```
+	**Meaning:**
+	Check if any variable/function created and referenced to any sheet, which exists or not.	
 ## Header
 * `import xlwings as xw`
 * `from xlwings import Range, Book`
