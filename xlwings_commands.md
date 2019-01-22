@@ -93,6 +93,12 @@ sht.range('A1').options(index=False).value = df1
   - `sht_pr.range('A1:A10').columns.autofit()   # sht_pr - name of a 'practice' sheet`
 * Autofit table from 'A1' to 'Z1600'
   - `sht_prod.range('A1:Z1600').columns.autofit()`
+* Make cell bold
+  ```py
+  import xlwings as xw
+  wb = xw.Book()
+  wb.sheets[0].range('A1').api.Font.Bold = True
+  ```
   
 ## Date, time
 * Current datetime
