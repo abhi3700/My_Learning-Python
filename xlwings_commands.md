@@ -66,7 +66,11 @@ mticker.Locator.MAXTICKS = 2000		# set max ticks
 * ### Read excel file and copy its sheet into current workbook's sheet.
 	**Code:**
 ```py
-excel_file = pd.ExcelFile("H:\\excel\\dryetch\\macro_enabled_logbooks\\ASH09_QC_LOG_BOOK\\ASH09_QC_LOG_BOOK.xlsm")
+excel_file = pd.ExcelFile("H:\\excel\\dryetch\\macro_enabled_logbooks\\ASH09_QC_LOG_BOOK\\ASH09_QC_LOG_BOOK.xlsm")   # from a hard drive
+
+# pull excel data from a server
+excel_file = pd.ExcelFile("\\\\vmfg\\VFD FILE SERVER\\SECTIONS\\DRY ETCH\\QC Log Book\\Final QC Log Book\\ASH_09_10_LOG_BOOK\\ASH09_QC_LOG_BOOK_macro\\ASH09_QC_LOG_BOOK.xlsm")
+
 df1 = excel_file.parse('ASFE1-ER')
 sht.range('A1').options(index=False).value = df1
 ```
