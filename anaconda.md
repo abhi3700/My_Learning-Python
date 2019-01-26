@@ -14,7 +14,7 @@
 * Various environments created inside conda are present in this directory - `"F:\Softwares\Anaconda3\envs"`
 * JUPYTER NOTEBOOK shortcut keys - 
   https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
-* <kbd>X</kbd> - to delete cell
+* <kbd>D + D</kbd> - to delete cell
 * <kbd>A</kbd> - add a cell above selected cell
 * <kbd>B</kbd> - add a cell below selected cell
 * <kbd>M</kbd> - cell as **Markdown**.
