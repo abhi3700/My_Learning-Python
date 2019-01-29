@@ -27,7 +27,7 @@
   - M-2: Install using `pip` in conda environment
     + On Windows, open "Anaconda Prompt"
     + `> pip install html2text`
-    + Now, check if `html2text` package is installed: try `conda list` on standard terminal.
+    + Now, check if `html2text` package is installed: try `conda list` on same/separate terminal.
     + DONE!
 * **PLotly** - https://anaconda.org/plotly/plotly
 * **conda-env**
