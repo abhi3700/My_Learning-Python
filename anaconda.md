@@ -22,5 +22,13 @@
 
 ## Packages
 #### NOTE: all packages here are not installed by default
-* Html2Text - https://anaconda.org/akode/html2text
-* PLotly - https://anaconda.org/plotly/plotly
+* **Html2Text** 
+  - M-1: https://anaconda.org/akode/html2text [NOT Successful]
+  - M-2: Install using `pip` in conda environment
+    + On Windows, open "Anaconda Prompt"
+    + `> pip install html2text`
+    + Now, check if `html2text` package is installed: try `conda list` on standard terminal.
+    + DONE!
+* **PLotly** - https://anaconda.org/plotly/plotly
+* **conda-env**
+  - conda env export lists all conda and pip packages in an environment. `conda-env` must be installed in the conda root (`conda install -c conda conda-env`).
