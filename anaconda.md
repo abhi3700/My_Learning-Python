@@ -19,6 +19,7 @@
 * <kbd>B</kbd> - add a cell below selected cell
 * <kbd>M</kbd> - cell as **Markdown**.
 * <kbd>shift + enter</kbd> - to run the cell and goto the next cell below.
+* To import `beautifulsoup` package, use this - `import bs4`, NOT this - ~`import beautifulsoup4`~
 
 ## Packages
 #### NOTE: all packages here are not installed by default
