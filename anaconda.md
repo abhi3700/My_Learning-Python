@@ -21,6 +21,24 @@
 * <kbd>shift + enter</kbd> - to run the cell and goto the next cell below.
 * To import `beautifulsoup` package, use this - `import bs4`, NOT this - ~`import beautifulsoup4`~
 
+## Conda
+* `conda list` - shows the list of packages installed
+* `conda list --revisions` - shows the revisions of the installation since first installation.
+  ```
+  2019-01-30 17:14:43  (rev 4)
+     beautifulsoup4  {4.6.0 -> 4.7.1}
+    +soupsieve-1.7.1
+
+  2019-02-07 20:57:34  (rev 5)
+     ca-certificates  {2018.12.5 -> 2019.1.23}
+     conda  {4.6.1 -> 4.6.2}
+     pandas  {0.20.3 -> 0.24.1}
+
+  2019-02-08 19:26:01  (rev 6)
+     pandas  {0.24.1 -> 0.20.3}
+  ```
+* `conda install pandas=0.20.3` - install a specific version of a package
+
 ## Packages
 #### NOTE: all packages here are not installed by default
 * **Html2Text** 
