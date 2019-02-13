@@ -181,6 +181,9 @@ wb = xw.Book.caller()
 win32api.MessageBox(wb.app.hwnd, "display message", "Title", )
 ```
 
+## Protect, Unprotect
+* `mysheet.api.Unprotect()`
+  [Github issue](https://github.com/ZoomerAnalytics/xlwings/issues/1032)
 
 ## Macro
 * ### Create python User-defined functions (UDFs): <br/>
