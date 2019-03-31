@@ -1,4 +1,4 @@
-# Excel
+# `xlwings`
 
 ## Installation
 * **Tools:** ST3, xlwings, conda
