@@ -1,3 +1,4 @@
+# `matplotlib`
 ## Installation
 * `conda install matplotlib`
 
