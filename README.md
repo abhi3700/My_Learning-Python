@@ -10,3 +10,4 @@ Learn Python
 ## Github Repos.
 * Python Algorithms - https://github.com/TheAlgorithms/Python
 * Plotly Offline Charts - https://github.com/SayaliSonawane/Plotly_Offline_Python
+* Plotly Dashboards with Dash - https://github.com/Pierian-Data/Plotly-Dashboards-with-Dash
