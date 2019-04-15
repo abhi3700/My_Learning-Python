@@ -9,3 +9,4 @@ Learn Python
 
 ## Github Repos.
 * Python Algorithms - https://github.com/TheAlgorithms/Python
+* Plotly Offline Charts - https://github.com/SayaliSonawane/Plotly_Offline_Python
