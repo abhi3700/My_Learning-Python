@@ -12,3 +12,5 @@ Learn Python
 * Plotly Offline Charts - https://github.com/SayaliSonawane/Plotly_Offline_Python
 * Plotly Dashboards with Dash - https://github.com/Pierian-Data/Plotly-Dashboards-with-Dash
 * Plotly Datasets - https://github.com/plotly/datasets
+* Django with Dash - [Online Documentation](https://django-plotly-dash.readthedocs.io/en/latest/introduction.html), [pip](https://pypi.org/project/django-plotly-dash/)
+* Dash Plotly - https://dash.plot.ly/
