@@ -1,5 +1,9 @@
 # My_learning-Python
-Learn Python
+### Learn Python: 
+  - #### Object Oriented Programming (OOP), Function Programming (FP)
+  - #### Data Science
+  - #### Machine Learning
+  - #### Web Development
 
 ## IDE
 * __Jupyter Notebook by Anaconda__ (used mostly in debugging each module)
