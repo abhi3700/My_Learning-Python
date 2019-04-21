@@ -32,17 +32,17 @@ The following packages will be downloaded:
 																					 Total:         7.1 MB
 ```
 <br/>
-  
+
 ## Getting Started
 * Create a `.py` file in ST3.
 * Build using Anaconda Compiler inside ST3 (provided Anaconda is installed in ST3) using `Tools >> Build System >> Anaconda Python Builder` and then <kbd>ctrl + b</kbd> to build the `.py` file.
 	<p align="center">
-	  <img src="./libs/Dash/images/console.png" alt="console Image" width="" height="">
+	  <img src="./images/console.png" alt="console Image" width="" height="">
 	</p>
 > Note: If the console is pressed (by mistake) with <kbd>ESC</kbd> button, then just <kbd>ctrl + b</kbd> to bring it again.
 * Open the http url by selecting the http url in console. It is shown below:	
 	<p align="center">
-	  <img src="./libs/Dash/images/console_open_url.png" alt="console_open_url Image" width="" height="">
+	  <img src="./images/console_open_url.png" alt="console_open_url Image" width="" height="">
 	</p>
 
 ## Utility
