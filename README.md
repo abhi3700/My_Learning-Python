@@ -23,6 +23,7 @@
 * Plotly Offline Charts - https://github.com/SayaliSonawane/Plotly_Offline_Python
 * Plotly Dashboards with Dash - https://github.com/Pierian-Data/Plotly-Dashboards-with-Dash
 * Plotly Datasets - https://github.com/plotly/datasets
+* Dash plotly recipes (for discussion forum) - https://github.com/plotly/dash-recipes
 
 ## Data Science
 * Dash Plotly - https://dash.plot.ly/

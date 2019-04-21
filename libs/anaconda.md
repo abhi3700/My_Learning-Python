@@ -48,6 +48,26 @@
   http: http://abhijit:CL00102@192.9.200.22:8080
   https: http://abhijit:CL00102@192.9.200.22:8080
   ```
+* SSL Error:
+  ```console
+  Solving environment: failed
+
+  CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/r/noarch/repodata.json.bz2>
+  Elapsed: -
+
+  An HTTP error occurred when trying to retrieve this URL.
+  HTTP errors are often intermittent, and a simple retry will get you on your way.
+
+  If your current network has https://www.anaconda.com blocked, please file
+  a support request with your network engineering team.
+
+  SSLError(MaxRetryError('HTTPSConnectionPool(host=\'repo.anaconda.com\', port=443): Max retries exceeded with url: /pkgs/r/noarch/repodata.json.bz2 (Caused by SSLError(SSLError("bad handshake: Error([(\'SSL routines\', \'tls_process_server_certificate\', \'certificate verify failed\')])")))'))
+  ```
+  
+  __Solution:__
+  Do this on Anaconda prompt - `conda config --set ssl_verify no`
+  > Warning: Note that this opens you up to some pretty serious attacks.
+  
 ## Packages
 #### NOTE: all packages here are not installed by default
 * **Html2Text** 
