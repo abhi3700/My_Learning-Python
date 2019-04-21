@@ -9,6 +9,8 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.layout = html.Div(children=[
 	html.H1(children="Hello Dash"),
 
+	html.H6(children="Book Author: Abhijit Roy"),
+
 	html.Div(children='''
 			Dash: A web application framework for Python.
 		'''),
