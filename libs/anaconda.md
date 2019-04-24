@@ -33,6 +33,34 @@
   [/home/abhijit/anaconda3] >>>
   PREFIX=/home/abhijit/anaconda3
   ```
+* DONE!
+  ```console
+  Do you wish the installer to initialize Anaconda3
+  by running conda init? [yes|no]
+  [no] >>> yes
+  WARNING: The conda.compat module is deprecated and will be removed in a future release.
+  no change     /home/abhijit/anaconda3/condabin/conda
+  no change     /home/abhijit/anaconda3/bin/conda
+  no change     /home/abhijit/anaconda3/bin/conda-env
+  no change     /home/abhijit/anaconda3/bin/activate
+  no change     /home/abhijit/anaconda3/bin/deactivate
+  no change     /home/abhijit/anaconda3/etc/profile.d/conda.sh
+  no change     /home/abhijit/anaconda3/etc/fish/conf.d/conda.fish
+  no change     /home/abhijit/anaconda3/shell/condabin/Conda.psm1
+  no change     /home/abhijit/anaconda3/shell/condabin/conda-hook.ps1
+  no change     /home/abhijit/anaconda3/lib/python3.7/site-packages/xonsh/conda.xsh
+  no change     /home/abhijit/anaconda3/etc/profile.d/conda.csh
+  modified      /home/abhijit/.bashrc
+
+  ==> For changes to take effect, close and re-open your current shell. <==
+
+  If you'd prefer that conda's base environment not be activated on startup,
+     set the auto_activate_base parameter to false:
+
+  conda config --set auto_activate_base false
+
+  Thank you for installing Anaconda3!
+  ```
 
 ## Shortcuts
 * Open Jupyter notebook using `$ jupyter notebook` on terminal (win 10) in a preferable directory.
