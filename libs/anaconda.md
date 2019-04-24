@@ -37,7 +37,7 @@
   2019-02-08 19:26:01  (rev 6)
      pandas  {0.24.1 -> 0.20.3}
   ```
-* `conda install pandas=0.20.3` - install a specific version of a package
+* ##### `conda install pandas=0.20.3` - install a specific version of a package
 * #### install/uninstall packages using internet with a proxy 
   Follow this steps: <br/>
   - `> conda config` - would create a file: `.condarc` in directory - "C:\Users\abhijit"
@@ -48,6 +48,12 @@
   http: http://abhijit:CL00102@192.9.200.22:8080
   https: http://abhijit:CL00102@192.9.200.22:8080
   ```
+* ##### `conda info -e`: List all Environments inside Anaconda(Installaed): 
+
+* ##### `conda create -n <yourenvname> python=<x.x> anaconda`: Create a Virtual Environment 
+* ##### `source activate <yourenvname>`: Activate virtual environment. Do this before installing packages.
+* ##### `source deactivate`: Deactivate virtual environment. Do this after installing packages.
+* ##### `conda install -n <yourenvname> [package]`: Install package(s) in virtual environment 
 * SSL Error:
   ```console
   Solving environment: failed
