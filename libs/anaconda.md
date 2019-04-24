@@ -65,6 +65,14 @@
   ```
 * ##### `conda install -n <yourenvname> [package]`: Install package(s) in virtual environment.
 * ##### `conda remove -n yourenvname -all`: Delete a no longer needed virtual environment.
+* ##### Change directory (F:\Coding\Github_repos\Kiwi) in __Anaconda Prompt__:
+  ```console
+  (base) C:\Users\abhijit>F:
+
+  (base) F:\>cd Coding\Github_repos\Kiwi
+
+  (base) F:\Coding\Github_repos\Kiwi>
+  ```
 * SSL Error:
   ```console
   Solving environment: failed
