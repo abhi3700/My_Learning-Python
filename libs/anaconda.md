@@ -53,7 +53,8 @@
 * ##### `conda create -n <yourenvname> python=<x.x> anaconda`: Create a Virtual Environment 
 * ##### `source activate <yourenvname>`: Activate virtual environment. Do this before installing packages.
 * ##### `source deactivate`: Deactivate virtual environment. Do this after installing packages.
-* ##### `conda install -n <yourenvname> [package]`: Install package(s) in virtual environment 
+* ##### `conda install -n <yourenvname> [package]`: Install package(s) in virtual environment.
+* ##### `conda remove -n yourenvname -all`: Delete a no longer needed virtual environment.
 * SSL Error:
   ```console
   Solving environment: failed
