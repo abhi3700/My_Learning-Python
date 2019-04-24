@@ -1,8 +1,38 @@
 # Anaconda
 
 ## Installation
+### M-1: Windows
 * https://www.anaconda.com/
 * tick the checkbox corresponding to "Add to path". This will enable using `conda` in the terminal.
+> NOTE: In some cases, we might have to install Anaconda on Linux using WSL. Because, there are errors like Microsoft Visual C++ 14.0 related to some packages.
+
+### M-2: Ubuntu (WSL)
+* Download Anaconda (`.sh` file) for Linux from this [website](https://www.anaconda.com/distribution/#download-section)
+* `$ ./Anaconda3-2019.03-Linux-x86_64.sh`
+  ```console
+  Welcome to Anaconda3 2019.03
+
+  In order to continue the installation process, please review the license
+  agreement.
+  Please, press ENTER to continue
+  >>>
+  ===================================
+  Anaconda End User License Agreement
+  ===================================
+  ```
+
+* Directory location: Home directory `cd ~`
+  ```console
+  Anaconda3 will now be installed into this location:
+  /home/abhijit/anaconda3
+
+    - Press ENTER to confirm the location
+    - Press CTRL-C to abort the installation
+    - Or specify a different location below
+
+  [/home/abhijit/anaconda3] >>>
+  PREFIX=/home/abhijit/anaconda3
+  ```
 
 ## Shortcuts
 * Open Jupyter notebook using `$ jupyter notebook` on terminal (win 10) in a preferable directory.
@@ -90,9 +120,35 @@
   SSLError(MaxRetryError('HTTPSConnectionPool(host=\'repo.anaconda.com\', port=443): Max retries exceeded with url: /pkgs/r/noarch/repodata.json.bz2 (Caused by SSLError(SSLError("bad handshake: Error([(\'SSL routines\', \'tls_process_server_certificate\', \'certificate verify failed\')])")))'))
   ```
   
-  __Solution:__
+  __Solution:__<br/>
   Do this on Anaconda prompt - `conda config --set ssl_verify no`
   > Warning: Note that this opens you up to some pretty serious attacks.
+* #### error: Microsoft Visual C++ 14.0 is required
+  ```console
+      error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": https://visualstudio.microsoft.com/downloads/
+
+      ----------------------------------------
+  ```
+  This error is found while installing `mysqlclient` package using `pip`.
+  __Solution:__ <br/>
+  - Download the package from the website for system's specs (Python version, 32-bit or 64-bit)
+  ```console
+  C:\Users\abhijit>python
+  Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>>
+  ```
+  - Search "python libraries uci" in Google.
+  - Click the 1st link - https://www.lfd.uci.edu/~gohlke/pythonlibs/
+  - <kbd>ctrl + f</kbd> for `mysqlclient`
+  - Download the package file for your system.
+  - Now, install the package in required Anaconda Environment using `pip`
+  ```console
+  (kiwienv) C:\Users\abhijit\Desktop>pip install mysqlclient-1.4.2-cp36-cp36m-win_amd64.whl
+  Processing c:\users\abhijit\desktop\mysqlclient-1.4.2-cp36-cp36m-win_amd64.whl
+  Installing collected packages: mysqlclient
+  Successfully installed mysqlclient-1.4.2
+  ```
   
 ## Packages
 #### NOTE: all packages here are not installed by default
