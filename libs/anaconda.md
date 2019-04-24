@@ -50,9 +50,14 @@
   ```
 * ##### `conda info -e`: List all Environments inside Anaconda(Installaed): 
 
-* ##### `conda create -n <yourenvname> python=<x.x> anaconda`: Create a Virtual Environment 
-* ##### `source activate <yourenvname>`: Activate virtual environment. Do this before installing packages.
-* ##### `source deactivate`: Deactivate virtual environment. Do this after installing packages.
+* ##### `conda create -n <yourenvname> python=<x.x> anaconda`: Create a Virtual Environment (similar to the base environment). It's better to not install the entire Anaconda in this command. Instead, install the packages which are needed. 
+* ##### `activate <yourenvname>`: Activate virtual environment. Do this before installing packages.
+```console
+C:\Users\abhijit>activate kiwienv
+
+(kiwienv) C:\Users\abhijit>
+```
+* ##### `deactivate`: Deactivate virtual environment. Do this after installing packages.
 * ##### `conda install -n <yourenvname> [package]`: Install package(s) in virtual environment.
 * ##### `conda remove -n yourenvname -all`: Delete a no longer needed virtual environment.
 * SSL Error:
