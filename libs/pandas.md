@@ -144,6 +144,10 @@ print(data.tail(6))		# tail of the dataframe
 </p>
 </details>
 
+* ### print a dataframe column (without index) or (as list)
+  ```py
+  emission['GHG'].tolist()
+  ```
 
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
