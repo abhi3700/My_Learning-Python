@@ -21,3 +21,7 @@
 		+ Open Anaconda prompt
 		+ type `pip install -r requirements.txt` and enter
 	- Otherwise, type `pip install -r requirements.txt` and enter in the command prompt.
+* Install offline package 
+	- Download in `*.tar.gz` format. E.g.- __package.tar.gz__
+	- `pip install package.tar.gz` (in default directory)
+	- `pip install package.tar.gz -t 'F:\Softwares\Python\Python37\Lib'` (in preferred directory)
