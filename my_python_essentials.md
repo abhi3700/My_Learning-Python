@@ -1,4 +1,7 @@
+# My Python Essentials
+The following python snippets are used frequently
 
+## Coding
 * ### String formatting
 ```py
 age = 45
@@ -53,9 +56,14 @@ b = func_a
 b()
 ``` 
 * #### Convert a list of `string` into `float` or `int`
-```
+```py
 >>> x = ["545.0", "545.6", "999.2"]
 >>> map(float, x)
 [545.0, 545.60000000000002, 999.20000000000005]
 >>>
 ```
+* #### dictionary
+```py
+>>> dict(name="abhijit", age=26)
+{'name': 'abhijit', 'age': 26}
+```	

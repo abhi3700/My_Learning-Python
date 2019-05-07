@@ -3,9 +3,10 @@
 ## Installation
 * **Tools:** ST3, xlwings, conda
 * Steps:
-  - `$ conda install xlwings`
+  - `$ conda install -c anaconda xlwings` or `$ conda install -c anaconda xlwings=0.15.7` (latest version used) 
   - `$ xlwings quickstart <project-name>`: start a excel with python project. E.g. `$ xlwings quickstart abhi`
   - `$ xlwings addin install`: install xlwings into excel. If needs to upgrade, then use `$ xlwings addin upgrade`.
+    > NOTE: In order to upgrade the addin, first upgrade xlwings version using `conda install xlwings=0.15.7`
   - Enable macro settings in the MS Excel
     + enable <kbd>Enable all macros</kbd> button in the `Trust Center >> Macro Settings >> Macro Settings`
     + enable <kbd>Trust access to the VBA project object model</kbd> button in the `Trust Center >> Macro Settings >> Developer Macro Settings`
@@ -53,6 +54,7 @@
 
 ## References
 * xlwings - https://www.xlwings.org/
+* xlwings Documentation - https://docs.xlwings.org/en/stable/index.html
 * Common Excel Tasks Demonstrated in Pandas - http://pbpython.com/excel-pandas-comp.html
 * Common Excel Tasks Demonstrated in Pandas part 2 - http://pbpython.com/excel-pandas-comp-2.html
 * Combining Data From Multiple Excel Files - http://pbpython.com/excel-file-combine.html

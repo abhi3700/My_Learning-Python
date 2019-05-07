@@ -72,14 +72,34 @@
 * Various environments created inside conda are present in this directory - `"F:\Softwares\Anaconda3\envs"`
 * JUPYTER NOTEBOOK shortcut keys - 
   https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
-* <kbd>D + D</kbd> - to delete cell
-* <kbd>A</kbd> - add a cell above selected cell
-* <kbd>B</kbd> - add a cell below selected cell
-* <kbd>M</kbd> - cell as **Markdown**.
+* <kbd>d + d</kbd> - to delete cell
+* <kbd>a</kbd> - add a cell above selected cell
+* <kbd>b</kbd> - add a cell below selected cell
+* <kbd>m</kbd> - cell as __Markdown__.
+* <kbd>y</kbd> - cell as __Code__
 * <kbd>shift + enter</kbd> - to run the cell and goto the next cell below.
+* <kbd>c</kbd> - copy a cell
+* <kbd>v</kbd> - paste below the clicked cell
+* <kbd>shift + up</kbd> - select multiple cells (Upward direction)
+* <kbd>shift + down</kbd> - select multiple cells (Downward direction)
+* <kbd>shift + m</kbd> - merge selected cells
 * To import `beautifulsoup` package, use this - `import bs4`, NOT this - ~`import beautifulsoup4`~
+* To see the output of many lines at once:
+  - Make it interactive 
+  ```py
+  from IPython.core.interactiveshell import InteractiveShell
+  InteractiveShell.ast_node_interactivity = "all"
+  ```
+  - import data and print head, tail
+  ```py
+  from pydataset import data
+  quakes = data('quakes')
+  quakes.head()
+  quakes.tail()
+  ```
 
-## Conda
+
+## `conda` package manager
 * `conda list` - shows the list of packages installed
 * `conda list --revisions` - shows the revisions of the installation since first installation.
   ```
@@ -131,6 +151,17 @@
   (base) F:\>cd Coding\Github_repos\Kiwi
 
   (base) F:\Coding\Github_repos\Kiwi>
+  ```
+* ##### `conda env create -f requirements.yml`: In one line (unlike above steps), create a new environment and install packages using a file - `requirements.yml`
+  Inside the file:
+  ```yml
+  # conda env create -f requirements.yml
+  name: cryptoarbitrage
+  dependencies:
+  - python=3.6
+  - xlwings==0.11.4
+  - pip:
+    - requests==2.18.4
   ```
 * SSL Error:
   ```console
@@ -190,3 +221,8 @@
 * **PLotly** - https://anaconda.org/plotly/plotly
 * **conda-env**
   - conda env export lists all conda and pip packages in an environment. `conda-env` must be installed in the conda root (`conda install -c conda conda-env`).
+
+
+
+## Blogs
+* [Understanding and Improving Conda’s performance](https://www.anaconda.com/understanding-and-improving-condas-performance/)
