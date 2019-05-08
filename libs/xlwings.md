@@ -5,6 +5,8 @@
 * Steps:
   - `$ conda install -c anaconda xlwings` or `$ conda install -c anaconda xlwings=0.15.7` (latest version used) 
   - `$ xlwings quickstart <project-name>`: start a excel with python project. E.g. `$ xlwings quickstart abhi`
+    > NOTE: Sometime it may happen that the xlwings tab is not shown in a project's Excel file. Then just try to open an already working project excel file (with Xlwings tab).
+    Basically, once executed in an Xlwings excel file, then it is going to fit in there.
   - `$ xlwings addin install`: install xlwings into excel. If needs to upgrade, then use `$ xlwings addin upgrade`.
     > NOTE: In order to upgrade the addin, first upgrade xlwings version using `conda install xlwings=0.15.7`
   - Enable macro settings in the MS Excel
