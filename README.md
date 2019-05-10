@@ -25,6 +25,7 @@
 * Plotly Datasets - https://github.com/plotly/datasets
 * Dash plotly recipes (for discussion forum) - https://github.com/plotly/dash-recipes
 * Pandas Exercises - https://github.com/guipsamora/pandas_exercises
+* Zulip (powerful open source team chat) - https://github.com/zulip/zulip
 
 ## Data Science
 * Dash Plotly - https://dash.plot.ly/
