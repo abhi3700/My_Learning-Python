@@ -67,57 +67,7 @@ print(data.tail(6))		# tail of the dataframe
 2     Afghanistan  1962    10267083
 3     Afghanistan  1967    11537966
 4     Afghanistan  1972    13079460
-5     Afghanistan  1977    14880372
-6     Afghanistan  1982    12881816
-7     Afghanistan  1987    13867957
-8     Afghanistan  1992    16317921
-9     Afghanistan  1997    22227415
-10    Afghanistan  2002    25268405
-11    Afghanistan  2007    31889923
-12        Albania  1952     1282697
-13        Albania  1957     1476505
-14        Albania  1962     1728137
-15        Albania  1967     1984060
-16        Albania  1972     2263554
-17        Albania  1977     2509048
-18        Albania  1982     2780097
-19        Albania  1987     3075321
-20        Albania  1992     3326498
-21        Albania  1997     3428038
-22        Albania  2002     3508512
-23        Albania  2007     3600523
-24        Algeria  1952     9279525
-25        Algeria  1957    10270856
-26        Algeria  1962    11000948
-27        Algeria  1967    12760499
-28        Algeria  1972    14760787
-29        Algeria  1977    17152804
 ...           ...   ...         ...
-1674  Yemen, Rep.  1982     9657618
-1675  Yemen, Rep.  1987    11219340
-1676  Yemen, Rep.  1992    13367997
-1677  Yemen, Rep.  1997    15826497
-1678  Yemen, Rep.  2002    18701257
-1679  Yemen, Rep.  2007    22211743
-1680       Zambia  1952     2672000
-1681       Zambia  1957     3016000
-1682       Zambia  1962     3421000
-1683       Zambia  1967     3900000
-1684       Zambia  1972     4506497
-1685       Zambia  1977     5216550
-1686       Zambia  1982     6100407
-1687       Zambia  1987     7272406
-1688       Zambia  1992     8381163
-1689       Zambia  1997     9417789
-1690       Zambia  2002    10595811
-1691       Zambia  2007    11746035
-1692     Zimbabwe  1952     3080907
-1693     Zimbabwe  1957     3646340
-1694     Zimbabwe  1962     4277736
-1695     Zimbabwe  1967     4995432
-1696     Zimbabwe  1972     5861135
-1697     Zimbabwe  1977     6642107
-1698     Zimbabwe  1982     7636524
 1699     Zimbabwe  1987     9216418
 1700     Zimbabwe  1992    10704340
 1701     Zimbabwe  1997    11404948
@@ -140,14 +90,51 @@ print(data.tail(6))		# tail of the dataframe
 1702  Zimbabwe  2002    11926563
 1703  Zimbabwe  2007    12311143
 ```
-
 </p>
 </details>
 
 * ### print a dataframe column (without index) or (as list)
-  ```py
-  emission['GHG'].tolist()
-  ```
+```py
+emission['GHG'].tolist()
+```
+* ### fill merged cells with same data
+  Given data:
+```
+        Sample  CD4     CD8
+Day 1   8311    17.3    6.44
+        8312    13.6    3.50
+        8321    19.8    5.88
+        8322    13.5    4.09
+Day 2   8311    16.0    4.92
+        8312    5.67    2.28
+        8321    13.0    4.34
+        8322    10.6    1.95
+```
+  Required output:
+```
+       Sample    CD4   CD8
+Day 1    8311  17.30  6.44
+Day 1    8312  13.60  3.50
+Day 1    8321  19.80  5.88
+Day 1    8322  13.50  4.09
+Day 2    8311  16.00  4.92
+Day 2    8312   5.67  2.28
+Day 2    8321  13.00  4.34
+Day 2    8322  10.60  1.95
+```
+  For the above required output, do this -
+```py
+df.index = pd.Series(df.index).fillna(method='ffill')
+
+# if index column is named as 'Date' column, then:
+df_frst1_thick['Date'] = pd.Series(df_frst1_thick['Date']).fillna(method='ffill')       # fill merged cells with same values
+```
+  > NOTE: But this cannot be applied to 'Remarks' column especially where, there are empty cells after merged cell, like this
+  <p align="left">
+    <img src="./images/merged_cells_in_excel.png" alt="Merged cells in Excel" width="" height="">
+  </p>
+
+
 
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
