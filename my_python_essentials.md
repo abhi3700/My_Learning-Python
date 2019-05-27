@@ -67,3 +67,8 @@ b()
 >>> dict(name="abhijit", age=26)
 {'name': 'abhijit', 'age': 26}
 ```	
+* #### binary representaion
+```py
+>>> print("{0:b}".format(45))
+101101
+```
