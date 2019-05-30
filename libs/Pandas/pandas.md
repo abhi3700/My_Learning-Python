@@ -135,6 +135,15 @@ df_frst1_thick['Date'] = pd.Series(df_frst1_thick['Date']).fillna(method='ffill'
   </p>
 
 
+* sort the column in pandas dataframe
+```py
+# Import pandas package  
+import pandas as pd  
+# making data frame  
+data = pd.read_csv("nba.csv")  
+# using sorted() method to return the list of columns sorted in alphabetical order.
+sorted(data) 
+```
 
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
@@ -163,10 +172,10 @@ SQL                   SQL             read_sql          to_sql
 SQL             Google Big Query      read_gbq          to_gbq
 ‘’’
 #to read about different types of files, and further functionality of reading in files, visit: http://pandas.pydata.org/pandas-docs/version/0.20/io.html
-df = pd.read_csv(‘local_path/file.csv’)
-df = pd.read_csv(‘https://file_path/file.csv')
+df = pd.read_csv('local_path/file.csv')
+df = pd.read_csv('https://file_path/file.csv')
 # when reading in tables, can specify separators, and note a column to be used as index separators can include tabs (“\t”), commas(“,”), pipes (“|”), etc.
-df = pd.read_table(‘https://file_path/file', sep=’|’, index_col=’column_x’)
+df = pd.read_table('https://file_path/file', sep='|', index_col='column_x')
 # examine the df data
 df           # print the first 30 and last 30 rows
 type(df)     # DataFrame
@@ -337,7 +346,7 @@ new_df = pd.concat([df1, df2], axis=1)
 #merging dfs based on paired columns; columns do not need to have same name, but should match values; left_on column comes from df1, right_on column comes from df2
 new_df = pd.merge(df1, df2, left_on=’column_x’, right_on=’column_y’)
 #can also merge slices of dfs together, though slices need to include columns used for merging
-new_df = pd.merge(df1[[‘column_x1’, ‘column_x2’]], df2, left_on=’column_x2', right_on=’column_y’)
+new_df = pd.merge(df1[['column_x1', 'column_x2']], df2, left_on='column_x2', right_on='column_y')
 #merging two dataframes based on shared index values (left is df1, right is df2)
 new_df = pd.merge(df1, df2, left_index=True, right_index=True)
  
