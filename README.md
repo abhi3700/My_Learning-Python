@@ -33,6 +33,7 @@
 
 ## Machine Learning
 
-
+## References
+* [Pandas dropping rows and columns](https://chrisalbon.com/python/data_wrangling/pandas_dropping_column_and_rows/)
 
 
