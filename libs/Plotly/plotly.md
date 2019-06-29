@@ -30,4 +30,5 @@ trace2 = go.Scatter(
 
 ```
 
-## Blogs
+## Repositories
+* [WorkCloud Plot](https://github.com/PrashantSaikia/Wordcloud-in-Plotly)
