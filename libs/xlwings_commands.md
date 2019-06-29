@@ -49,6 +49,17 @@ mticker.Locator.MAXTICKS = 2000		# set max ticks
 * `from xlwings import Range, Book`
 
 ## Book
+* ### Create (& open) an Excel file:
+  ```py
+  import xlwings as xw
+  wb = xw.Book()
+  wb.save('test.xlsx')
+  ```
+* ### Read an Excel file:
+  ```py
+  import xlwings as xw
+  wbtest = xw.Book('test.xlsx')
+  ```
 * ### Calling current book:
   - `wb = xw.Book.Caller()`
 * ### Calling a book by full name:
@@ -61,6 +72,17 @@ mticker.Locator.MAXTICKS = 2000		# set max ticks
   - `wb.sheets.add('main', after = 'Sheet1')`
 * ### Add a sheet named 'pre' before 'Sheet1':
   - `wb.sheets.add('pre', before = 'Sheet1')`
+* ### Delete a sheet
+```py
+import xlwings as xw
+wbtest = xw.Book('QT-2019 ACTION FLOW SUPPLY.xlsx')
+wbtest.sheets.add('main', after= 'Customers')
+
+# delete sheet - 'main'
+for sht in wbtest.sheets:
+    if 'main' in sht.name:
+        sht.delete()
+```
 
 ## File
 * ### Read excel file and copy its sheet into current workbook's sheet.
