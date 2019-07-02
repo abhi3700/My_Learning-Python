@@ -163,7 +163,16 @@ data.iloc[[0,3,6,24], [0,5,6]] # 1st, 4th, 7th, 25th row + 1st 6th 7th columns.
 data.iloc[0:5, 5:8] # first 5 rows and 5th, 6th, 7th columns of data frame (county -> phone1).
 ```
   [Reference](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)
-
+* ### Read row no. based on dataframe value
+```py
+# display dataframe with rows having 'ALBERTA INFRASTRUCTURE' in 'COMPANY NAME' column
+df_rows = df.loc[df['COMPANY NAME'].isin(['ALBERTA INFRASTRUCTURE'])]
+```
+```md
+COMPANY NAME	LOCATION	PHONE	ADDRESS	Second ship address	CONTACT 1
+ALBERTA INFRASTRUCTURE	DEVON, AB	(780) 987-8799	#1 OIL PATCH DRIVE, SUITE A232		
+ALBERTA INFRASTRUCTURE	EDMONTON, AB		ROOM 583 TERRACE BUILDING		
+```
 
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
