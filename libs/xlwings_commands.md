@@ -103,6 +103,8 @@ sht.range('A1').options(index=False).value = df1
 
 
 ## Cell, Row, Column
+* ### check if cell value is empty
+	- `if sht_quotation.range('I5').value is None:`
 * ### single cell with a value: 
   - `wb.sheets[0].range('A1').value = "abhijit"` or 
   - `wb.sheets['Sheet1'].range('A1').value = "abhijit"` 
