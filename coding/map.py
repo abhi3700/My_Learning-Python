@@ -20,5 +20,5 @@ for c in s:
 print(U)
 
 # M-2
-U = list(map(str.upper, s))
+U = list(map(lambda s: s.upper(), s))
 print(U)
