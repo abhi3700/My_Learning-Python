@@ -72,3 +72,19 @@ b()
 >>> print("{0:b}".format(45))
 101101
 ```
+## Code Optimization
+* #### `Map`
+```py
+items = [1, 2, 3, 4, 5]
+
+# M-1
+squared = []
+for i in items:
+    squared.append(i**2)
+print(squared)
+
+# M-2
+squared2 = list(map(lambda x: x**2, items))
+print(squared2)
+```
+[More](../coding/map.py)
