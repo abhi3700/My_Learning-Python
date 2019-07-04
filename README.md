@@ -35,5 +35,5 @@
 
 ## References
 * [Pandas dropping rows and columns](https://chrisalbon.com/python/data_wrangling/pandas_dropping_column_and_rows/)
-
+* [Python Tips](http://book.pythontips.com/en/latest/index.html)
 
