@@ -87,4 +87,4 @@ print(squared)
 squared2 = list(map(lambda x: x**2, items))
 print(squared2)
 ```
-[More](../coding/map.py)
+[More](./coding/map.py)
