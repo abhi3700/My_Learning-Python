@@ -1,6 +1,6 @@
 # My_learning-Python
 ### Learn Python: 
-  - #### Object Oriented Programming (OOP), Function Programming (FP)
+  - #### Object Oriented Programming (OOP), Functional Programming (FP)
   - #### Data Science
   - #### Machine Learning
   - #### Web Development
@@ -27,7 +27,7 @@
 * Pandas Exercises - https://github.com/guipsamora/pandas_exercises
 * Zulip (powerful open source team chat) - https://github.com/zulip/zulip
 
-## Data Science
+## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
 * Django with Dash - [Online Documentation](https://django-plotly-dash.readthedocs.io/en/latest/introduction.html), [pip](https://pypi.org/project/django-plotly-dash/)
 
