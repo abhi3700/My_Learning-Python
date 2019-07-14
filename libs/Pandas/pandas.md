@@ -173,7 +173,21 @@ COMPANY NAME	LOCATION	PHONE	ADDRESS	Second ship address	CONTACT 1
 ALBERTA INFRASTRUCTURE	DEVON, AB	(780) 987-8799	#1 OIL PATCH DRIVE, SUITE A232		
 ALBERTA INFRASTRUCTURE	EDMONTON, AB		ROOM 583 TERRACE BUILDING		
 ```
+* ### Insert, Assign column to existing Dataframe
+```py
+# M-1
+df_biom.insert(2, column= "Section", value= np.nan)          # Insert 'Section' column at position -2 i.e. 3rd column
+df_biom['Section'] = df_biom_section_list             # add values to this new column
 
+# M-2
+# Here, 2 columns has been assigned successively to the right of 1st column
+df.assign(temp_f=lambda x: x['temp_c'] * 9 / 5 + 32,
+          temp_k=lambda x: (x['temp_f'] +  459.67) * 5 / 9)
+# Output:
+#           temp_c  temp_f  temp_k
+# Portland    17.0    62.6  290.15
+# Berkeley    25.0    77.0  298.15
+```
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
 ```py
