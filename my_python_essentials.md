@@ -86,6 +86,8 @@ print(compute_x(3))
 y = lambda x : 5*x+2
 print(y(3))
 ```
+[More](./coding/lambda.py)
+
 * #### `Map`
 ```py
 items = [1, 2, 3, 4, 5]
