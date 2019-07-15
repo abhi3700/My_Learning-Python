@@ -73,6 +73,19 @@ b()
 101101
 ```
 ## Code Optimization
+* #### `Lambda`
+```py
+'''
+# M-1
+def compute_x(y):
+    return 5*y + 2
+
+print(compute_x(3))
+
+# M-2
+y = lambda x : 5*x+2
+print(y(3))
+```
 * #### `Map`
 ```py
 items = [1, 2, 3, 4, 5]
