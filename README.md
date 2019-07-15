@@ -26,6 +26,7 @@
 * Dash plotly recipes (for discussion forum) - https://github.com/plotly/dash-recipes
 * Pandas Exercises - https://github.com/guipsamora/pandas_exercises
 * Zulip (powerful open source team chat) - https://github.com/zulip/zulip
+* Code Beautify (into Image) - https://carbon.now.sh
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
