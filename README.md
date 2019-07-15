@@ -27,6 +27,7 @@
 * Pandas Exercises - https://github.com/guipsamora/pandas_exercises
 * Zulip (powerful open source team chat) - https://github.com/zulip/zulip
 * Code Beautify (into Image) - https://carbon.now.sh
+* Dash Bootstrap Components - https://dash-bootstrap-components.opensource.faculty.ai/
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
