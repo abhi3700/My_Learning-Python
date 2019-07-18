@@ -32,6 +32,7 @@
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
 * Django with Dash - [Online Documentation](https://django-plotly-dash.readthedocs.io/en/latest/introduction.html), [pip](https://pypi.org/project/django-plotly-dash/)
+* Python all charts - https://python-graph-gallery.com/
 
 ## Machine Learning
 
