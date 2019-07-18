@@ -188,6 +188,11 @@ df.assign(temp_f=lambda x: x['temp_c'] * 9 / 5 + 32,
 # Portland    17.0    62.6  290.15
 # Berkeley    25.0    77.0  298.15
 ```
+* ### Delete a row based on value in a column
+```py
+df_biom_pie_plot = df_biom[df_biom['Section'] != 'GH']      # filter-out 'GH' from dataframe
+```
+
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
 ```py
