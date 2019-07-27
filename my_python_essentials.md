@@ -116,3 +116,4 @@ print(res)	# ['ab', 'abc']
 res = filter(lambda k: 'ab' in k, lst)
 print(res)	# ['ab', 'abc']
 ```
+[More](./coding/filter.py)
