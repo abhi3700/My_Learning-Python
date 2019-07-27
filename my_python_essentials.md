@@ -103,3 +103,16 @@ squared2 = list(map(lambda x: x**2, items))
 print(squared2)
 ```
 [More](./coding/map.py)
+
+* #### `Filter`
+```py
+lst = ['a', 'ab', 'abc', 'bac']
+
+# M-1
+res = [k for k in lst if 'ab' in k]
+print(res)	# ['ab', 'abc']
+
+# M-2
+res = filter(lambda k: 'ab' in k, lst)
+print(res)	# ['ab', 'abc']
+```
