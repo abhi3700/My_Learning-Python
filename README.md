@@ -4,6 +4,7 @@
   - #### Data Science
   - #### Machine Learning
   - #### Web Development
+  - #### Chatbot
 
 ## IDE
 * __Jupyter Notebook by Anaconda__ (used mostly in debugging each module)
