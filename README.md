@@ -30,7 +30,10 @@
 * Zulip (powerful open source team chat) - https://github.com/zulip/zulip
 * Code Beautify (into Image) - [LINK](https://carbon.now.sh/?bg=rgba(48%2C127%2C194%2C1)&t=monokai&wt=none&l=yaml&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=4x&wm=false&code=worker%253A%2520python%2520app%252Fbot.py)
 * Dash Bootstrap Components - https://dash-bootstrap-components.opensource.faculty.ai/
-* Automate docs with Python - [Link 1](https://python-docx.readthedocs.io/en/latest/), [Link 2](https://pbpython.com/python-word-template.html)
+* Automate docs with Python - [Documentation](https://python-docx.readthedocs.io/en/latest/), [Github](https://github.com/python-openxml/python-docx), [pip](https://pypi.org/project/python-docx/), [Example](https://pbpython.com/python-word-template.html)
+* Automate PPT with Python - [Documentation](https://python-pptx.readthedocs.io/en/latest/), [Github](https://github.com/scanny/python-pptx), [pip](https://pypi.org/project/python-pptx/)
+*  Python Geocoding Toolbox (location, coordinates, address, street, city, country) - [pip](https://pypi.org/project/geopy/)
+
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
