@@ -32,7 +32,7 @@
 * Dash Bootstrap Components - https://dash-bootstrap-components.opensource.faculty.ai/
 * Automate docs with Python - [Documentation](https://python-docx.readthedocs.io/en/latest/), [Github](https://github.com/python-openxml/python-docx), [pip](https://pypi.org/project/python-docx/), [Example](https://pbpython.com/python-word-template.html)
 * Automate PPT with Python - [Documentation](https://python-pptx.readthedocs.io/en/latest/), [Github](https://github.com/scanny/python-pptx), [pip](https://pypi.org/project/python-pptx/)
-*  Python Geocoding Toolbox (location, coordinates, address, street, city, country) - [pip](https://pypi.org/project/geopy/)
+* Python Geocoding Toolbox (location, coordinates, address, street, city, country) - [pip](https://pypi.org/project/geopy/), [example](https://chrisalbon.com/python/data_wrangling/geolocate_a_city_and_country/) 
 
 
 ## Data Visualization
