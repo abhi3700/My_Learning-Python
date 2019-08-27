@@ -5,7 +5,14 @@
 * https://www.anaconda.com/
 * tick the checkbox corresponding to "Add to path". This will enable using `conda` in the terminal.
 > NOTE: In some cases, we might have to install Anaconda on Linux using WSL. Because, there are errors like Microsoft Visual C++ 14.0 related to some packages.
-
+* In case, paths are not added in Environment variables. Add the followings:
+```console
+F:\Softwares\Anaconda3
+F:\Softwares\Anaconda3\Library\mingw-w64\bin
+F:\Softwares\Anaconda3\Library\usr\bin
+F:\Softwares\Anaconda3\Library\bin
+F:\Softwares\Anaconda3\Scripts
+```
 ### M-2: Ubuntu (WSL)
 * Download Anaconda (`.sh` file) for Linux from this [website](https://www.anaconda.com/distribution/#download-section)
 * `$ ./Anaconda3-2019.03-Linux-x86_64.sh`
