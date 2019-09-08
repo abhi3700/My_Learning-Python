@@ -163,10 +163,10 @@ data.iloc[[0,3,6,24], [0,5,6]] # 1st, 4th, 7th, 25th row + 1st 6th 7th columns.
 data.iloc[0:5, 5:8] # first 5 rows and 5th, 6th, 7th columns of data frame (county -> phone1).
 ```
   [Reference](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)
-* ### Read row no. based on dataframe value
+* ### Filter out the dataframe based on value(s) in a column of dataframe
 ```py
 # display dataframe with rows having 'ALBERTA INFRASTRUCTURE' in 'COMPANY NAME' column
-df_rows = df.loc[df['COMPANY NAME'].isin(['ALBERTA INFRASTRUCTURE'])]
+df_search = df.loc[df['COMPANY NAME'].isin(['ALBERTA INFRASTRUCTURE'])]
 ```
 ```md
 COMPANY NAME	LOCATION	PHONE	ADDRESS	Second ship address	CONTACT 1
@@ -191,6 +191,57 @@ df.assign(temp_f=lambda x: x['temp_c'] * 9 / 5 + 32,
 * ### Delete a row based on value in a column
 ```py
 df_biom_pie_plot = df_biom[df_biom['Section'] != 'GH']      # filter-out 'GH' from dataframe
+```
+* ### To find out which rows have NaNs in a specific column:
+```py
+df_nan_rows = df[df['name column'].isnull()]
+```
+* ### To find out which rows do not have NaNs in a specific column:
+```py
+df_non_nan_rows = df[df['name column'].notnull()]
+```
+* ### Filter out the dataframe with all null values in multiple columns
+```py
+
+```
+* ### CSV to Pandas dataframe (Read CSV)
+```py
+import pandas as pd
+df_a = pd.read_csv('../keys/A.csv')
+```
+* ### Pandas dataframe to PostgreSQL (Upload)
+```py
+import d6tstack.utils as du
+du.pd_to_psql(df_a, cfg_uri_psql, 'product_a', if_exists='replace')
+```
+> NOTE: this technique is to slow
+```py
+'''
+  This takes 14 sec to upload to SQL DB table - 'product_a'
+'''
+sqlengine = sqlalchemy.create_engine(cfg_uri_psql)
+df_a.to_sql('product_a', con= sqlengine, if_exists='replace', index= False)
+```
+  [Refer](https://github.com/d6t/d6tstack/blob/master/examples-sql.ipynb)
+* ### PostgreSQL to Pandas dataframe (Download)
+```py
+import pandas as pd
+import sqlalchemy
+
+sqlengine = sqlalchemy.create_engine(cfg_uri_psql)
+
+# M-1
+df_sql_a = pd.read_sql_table('product_a', sqlengine)  # relatively faster (by 7 sec) than `con= DATABASE_URL`
+print(df_sql_a.head())
+
+# M-2
+df_sql_a = pd.read_sql_table('product_a', con= DATABASE_URL)
+print(df_sql_a.head())
+
+```
+* ### Pandas dataframe to CSV (write modified dataframe to CSV)
+```py
+df_sql_a.to_csv('keys/A.csv', index= False)
 ```
 
 ## Pandas at a glance
