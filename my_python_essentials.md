@@ -72,6 +72,11 @@ b()
 >>> print("{0:b}".format(45))
 101101
 ```
+* #### reversed iterator
+```py
+for i in reversed(range(8)):
+    print(i)
+```
 ## Code Optimization
 * #### `Lambda`
 ```py
