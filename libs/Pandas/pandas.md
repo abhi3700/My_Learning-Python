@@ -161,6 +161,7 @@ data.iloc[0:5] # first five rows of dataframe
 data.iloc[:, 0:2] # first two columns of data frame with all rows
 data.iloc[[0,3,6,24], [0,5,6]] # 1st, 4th, 7th, 25th row + 1st 6th 7th columns.
 data.iloc[0:5, 5:8] # first 5 rows and 5th, 6th, 7th columns of data frame (county -> phone1).
+data.iloc[1,:].tolist()   # ['11/2/2011', 'Matress', 1500, 1450, 10] returns index 1 with all columns
 ```
   [Reference](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)
 * ### Filter out the dataframe based on value(s) in a column of dataframe
