@@ -244,7 +244,12 @@ print(df_sql_a.head())
 ```py
 df_sql_a.to_csv('keys/A.csv', index= False)
 ```
+* ### Reset index of a dataframe
+```py
+# Computationally it is the fastest. Refer: https://stackoverflow.com/a/45692117
+df.index = pd.RangeIndex(len(df.index))     # reset index 
 
+```
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
 ```py
