@@ -250,6 +250,21 @@ df_sql_a.to_csv('keys/A.csv', index= False)
 df.index = pd.RangeIndex(len(df.index))     # reset index 
 
 ```
+* ### Info, size of a dataframe, Series
+```
+pandas.DataFrame
+================
+Display number of rows, columns, etc.: `df.info()`
+Get the number of rows: `len(df)`
+Get the number of columns: `len(df.columns)`
+Get the number of rows and columns: `df.shape`
+Get the number of elements: `df.size`
+Notes when specifying index
+
+pandas.Series
+=============
+Get the number of elements: `len(s)`, `s.size`
+```
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
 ```py
