@@ -32,3 +32,4 @@ trace2 = go.Scatter(
 
 ## Repositories
 * [WorkCloud Plot](https://github.com/PrashantSaikia/Wordcloud-in-Plotly)
+* [Ploty draw shapes - Rectangle, Circle, line](https://help.plot.ly/documentation/python/shapes/)
