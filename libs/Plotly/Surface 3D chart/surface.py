@@ -23,4 +23,4 @@ layout = dict(
 
 data = [trace1]
 fig = dict(data= data, layout= layout)
-py.offline.plot(fig)
+py.offline.plot(fig, filename= 'mt_bruno_elevation.html')

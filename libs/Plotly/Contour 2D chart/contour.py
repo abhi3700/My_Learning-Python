@@ -50,7 +50,7 @@ def contour_plot(i, l):
 
     data = [trace1]
     fig = dict(data= data, layout= layout)
-    py.offline.plot(fig, filename= 'Al_ER_Contour_plot_' + str(l.index(i)+1)+'.html', auto_open= True)
+    py.offline.plot(fig, filename= 'Al_ER_Contour_plot_' + str(l.index(i)+1) + '.html', auto_open= True)
     # j += 1
 
 row_list = [2, 5, 8, 11, 14]
