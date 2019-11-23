@@ -77,6 +77,14 @@ b()
 for i in reversed(range(8)):
     print(i)
 ```
+* #### truncate string
+```py
+some_var = 'AAAH8192375948'
+print(some_var[:5]) # AAAH8		starting 5 characters
+print(some_var[:-5]) # AAAH81923	upto (-4th) character from start
+print(some_var[-5:]) # 75948		from (-5th) character to end
+```
+
 ## Code Optimization
 * #### `Lambda`
 ```py
