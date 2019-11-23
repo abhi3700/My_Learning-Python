@@ -1,7 +1,9 @@
 # Pip
 ## Installation
 * `conda install pip`
-* Upgrade - `pip install --upgrade pip`
+* Upgrade - 
+	- Linux: `pip install --upgrade pip`
+	- Windows: `python -m pip install -U pip`
 
 ## Notes
 * Install Package at a custom location using `pip install <package> -t <directory>`. <br/>
