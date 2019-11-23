@@ -265,6 +265,10 @@ pandas.Series
 =============
 Get the number of elements: `len(s)`, `s.size`
 ```
+* Fetch Excel file
+	- choose `pd.read_csv()` over `pd.ExcelFile()` as later is class and eventually fetched from this class.
+	- [pd.read_csv vs pd.ExcelFile](https://stackoverflow.com/a/49991054)
+
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
 ```py

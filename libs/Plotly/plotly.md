@@ -29,6 +29,21 @@ trace2 = go.Scatter(
 
 
 ```
+* Plotly Offline display of charts
+    - M-1:
+    ```py
+    fig = dict(data= data, layout= layout)
+    py.offline.plot(fig, filename= "cp_plot_html_file.html")
+    py.offline.plot(fig, filename= "cp_plot_html_file.html", auto_open= False)  # default auto_open is set to `true`, which opens in browser automatically
+    py.offline.plot(fig, filename= "cp_plot_html_file.html")
+    ```
+    - M-2:
+    ```py
+    fig = go.Figure(data= data, layout= layout)
+    py.offline.plot(fig, filename= "cp_plot_html_file.html")
+    py.offline.plot(fig, filename= "cp_plot_html_file.html", auto_open= False)  # default auto_open is set to `true`, which opens in browser automatically
+    py.offline.plot(fig, filename= "cp_plot_html_file.html")
+    ```
 
 ## Repositories
 * [WorkCloud Plot](https://github.com/PrashantSaikia/Wordcloud-in-Plotly)
