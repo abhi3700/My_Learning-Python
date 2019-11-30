@@ -35,15 +35,25 @@
 * ### Button
   This can be used in order to run a script when needed. Basically, on a sheet in a workbook where we don't want to run the script all the time. Like <kbd>Fetch QC status</kbd> button used to display the QC status on a MessageBox.
   
-  **Follow the steps:**
+##### **Follow the steps:**
   - Go to the "Developer" tab in Excel.
   - Create a button "Insert >> Button" on an excel sheet.
   - Assign a macro by right clicking on the button.
-  - Copy and Paste the snippet from the default "module 1" to "button1_click" module. 
+  - Copy and Paste the snippet from the default "module 1" to "RUN_Click" module. 
   ```vba
-  mymodule = Left(ThisWorkbook.name, (InStrRev(ThisWorkbook.name, ".", -1, vbTextCompare) - 1))
-  RunPython ("import " & mymodule & ";" & mymodule & ".main()")
+  Sub RUN_Click()
+    Shell "cmd.exe /k cd /d" & ThisWorkbook.Path & "&& run.bat" & "&& exit"
+  End Sub
   ```
+  - Here, `run.bat` file is:
+  ```bat
+  @echo off
+  python .\octopus.py
+  rem dot octopus.dot -T png -o octopus.png
+  rem pause
+  ```
+  > NOTE: here, line-3 is for creating `octopus.png` file using `octopus.dot` file using [Graphviz](https://pypi.org/project/graphviz/) tool.
+  
   - From now, click on the button and the .py code will run and show the desired output.
   
 ## Shortcut keys
