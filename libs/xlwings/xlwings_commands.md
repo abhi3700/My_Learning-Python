@@ -66,6 +66,20 @@ mticker.Locator.MAXTICKS = 2000		# set max ticks
   - `wb = xw.Book(r'C:/path/to/file.xlsx')`
 > NOTE: When specifying file paths on Windows, you should either use raw strings by putting an r in front of the string or use double back-slashes like so: C:\\path\\to\\file.xlsx.
 * [Official link](https://docs.xlwings.org/en/stable/connect_to_workbook.html#python-to-excel)
+* From `v0.16.0` version onwards, the python function can be build using __M-1: <kbd>ctrl+b</kbd> in ST3 editor__ or __M-2:using the <kbd>RUN</kbd> button inside Excel__.
+```py
+def button_run():
+    # Fetch Dataframe for CP Plot
+    df_repl1a_cp = sht_repl1a_cp.range('A9').options(
+        pd.DataFrame, header=1, index=False, expand='table'
+        ).value                                                         # fetch the data from sheet- 'ASBE1-CP'
+    df_repl1a_cp['Remarks'].fillna('..', inplace=True)        # replacing the empty cells with 'NIL'
+
+
+if __name__ == "__main__":
+    xw.books.active.set_mock_caller()
+    button_run()
+```
 
 ## Sheet
 * ### Add a sheet named 'main' after 'Sheet1': 
