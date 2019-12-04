@@ -80,6 +80,27 @@ if __name__ == "__main__":
     xw.books.active.set_mock_caller()
     button_run()
 ```
+* In order to create an User Interface (UI) into an Excel, just add a <kbd>RUN</kbd> button via adding an Active button from __Developer__ Tab. And then execute python macro using either of the 2 methods:
+  - M-1: this is for updating the charts in the same folder.
+    + 1. Create a `run.bat` file and add this code:
+    ```bat
+    Sub RUN_Click()
+      Shell "cmd.exe /k cd /d" & ThisWorkbook.Path & "&& run.bat" & "&& exit"
+    End Sub
+    ```
+    + 2. Now, there will be no progress circle shown in the excel. Instead, a CMD terminal opens up and shows the status - __ERROR__ or __NO ERROR__.
+
+    > NOTE: Demerit: Doesn't work for fetching files from local network (due to __UNIX__ directory not compatible in __Windows__)
+
+  - M-2: Use it especially when there is no chart creation.
+  ```bat
+  Sub RUN_Click()
+    mymodule = Left(ThisWorkbook.Name, (InStrRev(ThisWorkbook.Name, ".", -1, vbTextCompare) - 1))
+    RunPython ("import " & mymodule & ";" & mymodule & ".button_run()")
+  End Sub
+  ```
+
+
 
 ## Sheet
 * ### Add a sheet named 'main' after 'Sheet1': 
