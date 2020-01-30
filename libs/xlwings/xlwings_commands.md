@@ -77,7 +77,6 @@ def button_run():
 
 
 if __name__ == "__main__":
-    xw.books.active.set_mock_caller()
     button_run()
 ```
 * In order to create an User Interface (UI) into an Excel, just add a <kbd>RUN</kbd> button via adding an Active button from __Developer__ Tab. And then execute python macro using either of the 2 methods:
@@ -90,7 +89,7 @@ if __name__ == "__main__":
     ```
     + 2. Now, there will be no progress circle shown in the excel. Instead, a CMD terminal opens up and shows the status - __ERROR__ or __NO ERROR__.
 
-    > NOTE: Demerit: Doesn't work for fetching files from local network (due to __UNIX__ directory not compatible in __Windows__)
+    > NOTE: Demerit: Doesn't work for fetching files from local network (due to __UNIX__ directory not compatible in __Windows__). In this situation tried with `os`, `shutil`, `getpass` packages, but couldn't copy & replace the files. Inherently incompatible due to __Windows__ - __UNIX__. But when it was run with <kbd>ctrl+b</kbd> inside __ST3__, then the copy, replace happened. This implies that there is some incompatibility issue of __DOS-UNIX__.
 
   - M-2: Use it especially when there is no chart creation.
   ```bat
@@ -99,6 +98,16 @@ if __name__ == "__main__":
     RunPython ("import " & mymodule & ";" & mymodule & ".button_run()")
   End Sub
   ```
+    In this case, in order to update the charts, 
+    - M-1: create `run.sh` for any file location (local PC or local network). [RECOMMENDED]
+    ```bash
+    python CNT01_Ch_A_QC_LOG_BOOK.py
+    tskill excel
+    ```
+
+    > NOTE: Here, `tskill excel` command has been used for closing the excel file while running from `run.sh` file created in the same directory.
+
+    - M-2: create `run.bat` for any files in local PC. 
 
 
 
