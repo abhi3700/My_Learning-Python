@@ -1,0 +1,90 @@
+FileVersion 1 2;
+FileTimestamp 11-21-19 17:31:30;
+InspectionStationID "KLA_TENCOR" "KLA2139" "E1171";
+SampleType WAFER;
+ResultTimestamp 11-21-19 12:11:52;
+LotID "F19310002.F1";
+SampleSize 1 200;
+DeviceID "SH01T";
+SetupID "SH01T_POLY" 11-21-19 12:09:28;
+StepID "POLY";
+ResultsID "F19310002.F1";
+SampleOrientationMarkType NOTCH;
+OrientationMarkLocation DOWN;
+DiePitch 21919.4 21919.6;
+DieOrigin 0 0;
+WaferID "07";
+Slot 7;
+SampleCenterLocation 21988.9 -3025.77;
+InspectionTest 1;
+SampleTestPlan 46
+  2 -4 
+  1 -4 
+  0 -4 
+  -1 -4 
+  3 -3 
+  2 -3 
+  1 -3 
+  0 -3 
+  -1 -3 
+  -2 -3 
+  4 -2 
+  3 -2 
+  2 -2 
+  1 -2 
+  0 -2 
+  -1 -2 
+  -2 -2 
+  -3 -2 
+  4 -1 
+  3 -1 
+  2 -1 
+  1 -1 
+  0 -1 
+  -1 -1 
+  -2 -1 
+  -3 -1 
+  4 0 
+  3 0 
+  2 0 
+  1 0 
+  0 0 
+  -1 0 
+  -2 0 
+  -3 0 
+  3 1 
+  2 1 
+  1 1 
+  0 1 
+  -1 1 
+  -2 1 
+  3 2 
+  2 2 
+  1 2 
+  0 2 
+  -1 2 
+  -2 2 ;
+AreaPerTest 2.26491e+009;
+TestParametersSpec 2
+  PIXELSIZE    SAMPLEPERCENTAGE  ;
+TestParametersList
+  0.25    0  ;
+DefectClusterSpec 3
+  THRESHOLD    MINSIZE    MERGETOL  ;
+DefectClusterSetup 
+  0    2    3  ;
+DefectRecordSpec 19 DEFECTID X Y XREL YREL XINDEX YINDEX XSIZE YSIZE DEFECTAREA DSIZE CLASSNUMBER TEST CLUSTERNUMBER ROUGHBINNUMBER FINEBINNUMBER REVIEWSAMPLE IMAGECOUNT IMAGELIST ;
+DefectList
+ 1 -10376.671 67128.359 11612.206 20263.425 0 2 1.498 1.247 0.660 0.812 0 1 0 0 0 1 0 0
+ 2 -55733.082 63696.617 10094.536 16831.682 -2 2 0.749 0.997 0.284 0.533 0 1 0 0 0 1 0 0
+ 3 -77355.648 21022.705 10391.340 17996.936 -3 0 1.498 1.496 0.629 0.793 0 1 0 0 0 1 0 0
+ 4 -32801.722 -22479.646 11106.525 18333.750 -1 -2 0.998 0.997 0.568 0.753 0 1 0 0 0 1 0 0
+ 5 -80050.937 -22651.505 7696.051 18161.891 -3 -2 1.498 0.997 0.403 0.634 0 1 0 0 0 1 0 0
+ 6 -79853.335 -23048.306 7893.652 17765.090 -3 -2 0.499 0.498 0.242 0.491 0 1 0 0 0 1 0 0
+ 7 -77541.023 -24786.416 10205.965 16026.980 -3 -2 0.749 0.498 0.307 0.498 0 1 0 0 0 1 0 0
+ 8 26815.626 -69889.320 4965.764 14763.242 2 -4 1.498 0.748 0.263 0.512 0 1 0 0 0 1 0 0;
+SummarySpec 5
+  TESTNO    NDEFECT    DEFDENSITY    NDIE    NDEFDIE  ;
+SummaryList 
+  1    8    0.3532    46    17  ;
+EndOfFile;
