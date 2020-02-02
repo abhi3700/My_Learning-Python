@@ -84,7 +84,11 @@ print(some_var[:5]) # AAAH8		starting 5 characters
 print(some_var[:-5]) # AAAH81923	upto (-4th) character from start
 print(some_var[-5:]) # 75948		from (-5th) character to end
 ```
-
+* #### Check version of package
+```py
+import pandas
+print(pandas.__version__)
+```
 ## Code Optimization
 * #### `Lambda`
 ```py

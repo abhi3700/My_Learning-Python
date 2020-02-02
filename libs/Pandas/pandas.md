@@ -278,6 +278,15 @@ Get the number of elements: `len(s)`, `s.size`
   
 df.round({"A":1, "B":2, "C":3, "D":4}) 
 ```
+* Delete a column from dataframe
+```py
+df.drop(['A'], axis = 1)
+```
+* fetch html file with xls extension into dataframe
+```py
+tables = pd.read_html('../data/Data.xls')       # returns a list of tables
+df = tables[0]      # first element of the list
+```
 
 ## Pandas at a glance
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
