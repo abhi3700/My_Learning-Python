@@ -89,6 +89,14 @@ print(some_var[-5:]) # 75948		from (-5th) character to end
 import pandas
 print(pandas.__version__)
 ```
+* #### remove duplicate strings from a list
+```py
+a = ['DICD_AA_Dns_Line_Mean', 'DICD_AA_Dns_Line_Mean', 'DICD_AA_Dns_Line_Mean', 'DICD_AA_Iso_Line_Mean', 'DICD_AA_Iso_Line_Mean', 'DICD_AA_Iso_Line_Mean']
+print(a)
+a = list(set(a))
+print(a)		# returns ['DICD_AA_Iso_Line_Mean', 'DICD_AA_Dns_Line_Mean']
+```
+
 ## Code Optimization
 * #### `Lambda`
 ```py
