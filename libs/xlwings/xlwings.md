@@ -13,6 +13,31 @@
     + enable <kbd>Enable all macros</kbd> button in the `Trust Center >> Macro Settings >> Macro Settings`
     + enable <kbd>Trust access to the VBA project object model</kbd> button in the `Trust Center >> Macro Settings >> Developer Macro Settings`
 
+### __Troubleshooting:__ 
+* if this error found:
+```
+Traceback (most recent call last):
+  File "c:\users\abhijit\anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\users\abhijit\anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\abhijit\Anaconda3\Scripts\xlwings.exe\__main__.py", line 5, in <module>
+  File "c:\users\abhijit\anaconda3\lib\site-packages\xlwings\__init__.py", line 42, in <module>
+    from . import _xlwindows as xlplatform
+  File "c:\users\abhijit\anaconda3\lib\site-packages\xlwings\_xlwindows.py", line 10, in <module>
+    import win32api
+ImportError: DLL load failed: The specified procedure could not be found.
+```
+__Solution:__ <br></br>
+delete all the xlwings file from C:\Users\abhijit\AppData\Roaming\ drive. And then the xlwings tab will be deleted from the excel. Now, uninstall MS office from control panel. 
+
+* Error like this:
+```
+No file found in this directory: "C:\Users\abhijit\AppData\Roaming\Microsoft\Excel\XLSTART\"
+``` 
+while doing `xlwings addin install`, it looks for the __xlwings.xlam__ file in this directory: "C:\Users\abhijit\AppData\Roaming\Microsoft\Excel\XLSTART\". If any issue, just download `.xlam` file from github repository releases page and put it here.
+
+
 ## Usages
 * Freeze row, column 
   - click a row and do this - "View >> Freeze Panes".
