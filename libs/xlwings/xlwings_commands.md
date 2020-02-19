@@ -43,6 +43,60 @@ End Sub
 import matplotlib.ticker as mticker
 mticker.Locator.MAXTICKS = 2000		# set max ticks
 ```
+* If any error like this
+```py
+---------------------------
+Error
+---------------------------
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "i:\github_repos\autoplot\examples\dry_etch\ash09_qc_log_book\ASH09_QC_LOG_BOOK.py", line 245, in button_run
+
+    wb, sht_asfe1_cp, sht_asfe1_er, sht_run, x_coord_pr, y_coord_pr, excel_file = init()
+
+  File "i:\github_repos\autoplot\examples\dry_etch\ash09_qc_log_book\ASH09_QC_LOG_BOOK.py", line 239, in init
+
+    excel_file = pd.ExcelFile(excel_file_directory)
+
+  File "F:\Softwares\Anaconda3\lib\site-packages\pandas\io\excel\_base.py", line 821, in __init__
+
+    self._reader = self._engines[engine](self._io)
+
+  File "F:\Softwares\Anaconda3\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+
+    super().__init__(filepath_or_buffer)
+
+  File "F:\Softwares\Anaconda3\lib\site-packages\pandas\io\excel\_base.py", line 353, in __init__
+
+    self.book = self.load_workbook(filepath_or_buffer)
+
+  File "F:\Softwares\Anaconda3\lib\site-packages\pandas\io\excel\_xlrd.py", line 36, in load_workbook
+
+    return open_workbook(filepath_or_buffer)
+
+  File "F:\Softwares\Anaconda3\lib\site-packages\xlrd\__init__.py", line 111, in open_workbook
+
+    with open(filename, "rb") as f:
+
+FileNotFoundError: [Errno 2] No such file or directory: 'ASH09_QC_LOG_BOOK.xlsm'
+
+
+
+Press Ctrl+C to copy this message to the clipboard.
+---------------------------
+OK   
+---------------------------
+```
+__Solution:__
+```md
+Just redefine the __excel_file_directory__ from
+FROM
+excel_file_directory = "ASH09_QC_LOG_BOOK.xlsm"
+TO
+excel_file_directory = "I:\\github_repos\\AutoPlot\\examples\\dry_etch\\ASH09_QC_LOG_BOOK\\ASH09_QC_LOG_BOOK.xlsm"
+```
 
 ## Header
 * `import xlwings as xw`
