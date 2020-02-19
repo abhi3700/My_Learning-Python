@@ -91,7 +91,7 @@ OK
 ```
 __Solution:__
 ```md
-Just redefine the __excel_file_directory__ from
+Just redefine the __excel_file_directory__
 FROM
 excel_file_directory = "ASH09_QC_LOG_BOOK.xlsm"
 TO
