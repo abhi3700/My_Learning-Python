@@ -89,7 +89,7 @@ Press Ctrl+C to copy this message to the clipboard.
 OK   
 ---------------------------
 ```
-__Solution:__
+__Solution:__ Don't use relative path. Always use absolute path for the buttons (inside Excel) to work properly.
 ```md
 Just redefine the __excel_file_directory__
 FROM
