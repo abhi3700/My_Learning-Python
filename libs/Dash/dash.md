@@ -10,12 +10,13 @@ In Dash, following packages are installed:
 * flask-compress
 
 ### M-1:
-1. Open __Anaconda command prompt__.
-2. `pip install dash==0.39.0` [Refer for latest](https://dash.plot.ly/installation)
+1. Open __terminal__.
+2. `pip install dash`
+3. `pip install dash-bootstrap-components` : Bootstrap themed components for use in Plotly Dash
 3. DONE!
 
 ### M-2:
-1. Open __Anaconda command prompt__
+1. Open __terminal__.
 2. Type `conda install -c conda-forge dash` and enter.
 ```console
 The following packages will be downloaded:
@@ -32,6 +33,8 @@ The following packages will be downloaded:
 																					 Total:         7.1 MB
 ```
 <br/>
+3. `pip install dash-bootstrap-components` : Bootstrap themed components for use in Plotly Dash
+
 
 ## Getting Started
 * Create a `.py` file in ST3.
