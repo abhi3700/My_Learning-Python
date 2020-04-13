@@ -1,6 +1,10 @@
 # PyQt5
 Learn GUI development with `PyQt5`
 
+## Installation
+* PyQt5: `pip install pyqt5`
+* Qt Designer: Download the setup file from [here](https://build-system.fman.io/qt-designer-download).
+
 ## Login
 * Login to your account in this [site](https://www.learnpyqt.com/) for accessing your material.
 
