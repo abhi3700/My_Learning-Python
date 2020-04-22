@@ -6,11 +6,40 @@
   - #### Web Development
   - #### Chatbot
 
-## IDE
+## Installation
+### How I use?
+* Editor (with suggestion): Sublime Text 3 (Crack version with setup), [suggestion](#sublime-text-3-recommended-editor)
+* Interpreter
+	- Anaconda (on Windows)
+	- Python3 (on Linux (Ubuntu)) (If required)
+
+### Tools:
+* [Linux (Ubuntu)]: `sudo apt install python3`
+	- And use `pip` as package manager. No `conda` available for python [in linux].
+
+	> NOTE: Why not Anaconda in Linux?
+
+	> - If already installed in Windows, & Linux is running on WSL. Then, try using anaconda in Windows, so that it will not add (so many approx. 600 MB of) packages additionally in the PC/Laptop.
+
+	> - Anaconda is mainly installed because of built-in IDEs like Jupyter notebook, Spyder.
+
+	> - Also, both `conda` & `pip` package manager comes alongwith.
+
 * __Jupyter Notebook by Anaconda__ (used mostly in debugging each module)
 * __Sublime text 3__ (Install conda packages after Anaconda installation) - Excel-python (with xlwings), Dash (Dashboard), Django (Web App)
 
 > Note: It depends on the project. If it consists of multiple dependent python files, then use ST3, otherwise use Jupyter Notebook.
+
+* #### Sublime Text 3 ([RECOMMENDED] Editor)
+	- For Python, ST3 is recommended for editing.
+	- Anaconda installed & added to PATH in Windows.
+	- __Packages__
+		+ [Anaconda](https://packagecontrol.io/packages/Anaconda)
+	- __Build system__
+		+ default
+	- __Snippet__
+		+ None
+
 
 #### [Anaconda](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/anaconda.md)        #packagemanager
 #### [Pip](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pip.md)						      #packagemanager
