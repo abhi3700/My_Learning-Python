@@ -15,7 +15,7 @@
 
 ### Tools:
 * [Linux (Ubuntu)]: `sudo apt install python3`
-	- And use `pip` as package manager. No `conda` available for python [in linux].
+	- And use `pip` as package manager. Install `conda` using [this](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html#installing-on-linux).
 
 	> NOTE: Why not Anaconda in Linux?
 
