@@ -64,6 +64,7 @@
 * Python Geocoding Toolbox (location, coordinates, address, street, city, country) - [pip](https://pypi.org/project/geopy/), [example](https://chrisalbon.com/python/data_wrangling/geolocate_a_city_and_country/) 
 * Geocoding and reverse geocoding using Python - https://chrisalbon.com/python/data_wrangling/geocoding_and_reverse_geocoding/
 * Beautiful formatting in Console - https://github.com/willmcgugan/rich
+* Learning Python through test-driven development of games and puzzles - https://github.com/kyclark/tiny_python_projects
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
