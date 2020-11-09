@@ -65,6 +65,7 @@
 * Geocoding and reverse geocoding using Python - https://chrisalbon.com/python/data_wrangling/geocoding_and_reverse_geocoding/
 * Beautiful formatting in Console - https://github.com/willmcgugan/rich
 * Learning Python through test-driven development of games and puzzles - https://github.com/kyclark/tiny_python_projects
+* Open source home automation that puts local control and privacy first - https://github.com/home-assistant/core
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
