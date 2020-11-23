@@ -48,3 +48,6 @@ trace2 = go.Scatter(
 ## Repositories
 * [WorkCloud Plot](https://github.com/PrashantSaikia/Wordcloud-in-Plotly)
 * [Ploty draw shapes - Rectangle, Circle, line](https://help.plot.ly/documentation/python/shapes/)
+
+## References
+* 2020, Plotly versions: Plotly, plotly.express - https://medium.com/analytics-vidhya/interactive-data-visualization-became-much-easier-with-help-of-plotly-express-64c56e781b53
