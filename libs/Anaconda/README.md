@@ -13,6 +13,12 @@ F:\Softwares\Anaconda3\Library\usr\bin
 F:\Softwares\Anaconda3\Library\bin
 F:\Softwares\Anaconda3\Scripts
 ```
+* Update using CMD:
+```console
+# conda update --prefix <anaconda-installation-directory> anaconda
+conda update --prefix F:\Softwares\Anaconda3 anaconda
+```
+
 ### M-2: Ubuntu (WSL)
 * Download Anaconda (`.sh` file) for Linux from this [website](https://www.anaconda.com/distribution/#download-section)
 * `$ ./Anaconda3-2019.03-Linux-x86_64.sh`
