@@ -20,3 +20,9 @@ a = np.array(1, 3, 4)
 b = np.array(4, 6, 8)
 a*b = np.array([4. 18. 32])
 ```
+
+## Concepts
+* Normal Distribution (like Gaussian Distribution) has 3 main params:
+	- __loc__ i.e. mean, where the peak of the bell exists
+	- __scale__ i.e. Standard Deviation, how much flat the curve is
+	- __size__ i.e. shape of the returned array
