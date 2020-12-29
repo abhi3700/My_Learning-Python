@@ -18,5 +18,7 @@ a = np.array([
 	])
 """
 # a = np.random.randint(27)
+
+
 a = np.random.rand(27)
 print(a)
