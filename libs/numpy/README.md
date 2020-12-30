@@ -8,6 +8,10 @@
 
 
 ## Coding
+* Import package
+```py
+import numpy as np
+```
 * multiplication
 ```py
 # in case of list
@@ -20,6 +24,19 @@ a = np.array(1, 3, 4)
 b = np.array(4, 6, 8)
 a*b = np.array([4. 18. 32])
 ```
+* Vector
+```py
+a = np.array([1, 2, 3, 4])
+```
+* Matrix
+```py
+matrix_obj = np.matrix([[1, 2],
+												[1, 2],
+												[1, 2]])
+```
+	- matrix func is not used because:
+		+ arrays are the de facto standard data structure of NumPy
+		+ vast majority of NumPy operations return arrays, not matrix objects
 
 ## Concepts
 * Normal Distribution (like Gaussian Distribution) has 3 main params:
