@@ -45,7 +45,7 @@
 #### [Pip](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pip.md)						      #packagemanager
 #### [pandas](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pandas.md)			      #package
 #### [xlwings](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/xlwings.md)		      #package
-#### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib.md)	  #package
+#### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib/matplotlib.md)	  #package
 
 
 ## Github Repos.
