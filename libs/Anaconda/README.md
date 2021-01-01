@@ -110,7 +110,16 @@ conda update --prefix F:\Softwares\Anaconda3 anaconda
   quakes.head()
   quakes.tail()
   ```
+* In a code cell of Jupyter notebook, to display multiple variables result, use <kbd>comma</kbd> punctuation b/w variables like this:
+```py
+# get the diagonal of a matrix
+matrix,matrix.diagonal()
 
+(array([[1, 2, 3],
+        [2, 4, 6],
+        [3, 8, 9]]),
+ array([1, 4, 9]))
+```
 
 ## `conda` package manager
 * `conda list` - shows the list of packages installed
