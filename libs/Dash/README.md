@@ -62,3 +62,7 @@ The following packages will be downloaded:
 	- Install a list of Dash packages (used in your project) using `pip install -r requirements.txt`
 	- Open the server (with `app.py` file) in your browser using `python app.py`
 * 
+
+
+## References
+* [Bootstrap Padding & margins](https://devopspoints.com/bootstrap-4-margins-and-padding.html)
