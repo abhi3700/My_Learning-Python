@@ -16,7 +16,8 @@ app.layout = html.Div([
 	html.Div(id='output-tab')
 	])
 
-
+if __name__ == '__main__':
+	app.run_server(debug=True)
 # Reference
 # ===========
 # https://community.plot.ly/t/how-to-create-a-pie-chart-in-dash-app-under-a-particular-tab/7700/2

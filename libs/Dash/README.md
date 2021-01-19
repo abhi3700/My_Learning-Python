@@ -8,14 +8,15 @@ In Dash, following packages are installed:
 * dash-renderer
 * dash-table
 * flask-compress
+* dash-bootstrap-components
 
-### M-1:
+### M-1: using pip
 1. Open __terminal__.
 2. `pip install dash`
 3. `pip install dash-bootstrap-components` : Bootstrap themed components for use in Plotly Dash
 3. DONE!
 
-### M-2:
+### M-2: using conda
 1. Open __terminal__.
 2. Type `conda install -c conda-forge dash` and enter.
 ```console
