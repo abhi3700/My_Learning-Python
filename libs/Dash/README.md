@@ -66,3 +66,4 @@ The following packages will be downloaded:
 
 ## References
 * [Bootstrap Padding & margins](https://devopspoints.com/bootstrap-4-margins-and-padding.html)
+* [Bootstrap Cheatsheet](https://hackerthemes.com/bootstrap-cheatsheet/)

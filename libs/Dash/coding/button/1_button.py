@@ -1,5 +1,6 @@
 """
-    Bootstrap includes several predefined button styles based on the predefined contextual colors. Chooose between them using the color argument.
+    Bootstrap includes several predefined button styles based on the predefined contextual colors. 
+    Chooose between them using the color argument.
 """
 import dash
 import dash_bootstrap_components as dbc
