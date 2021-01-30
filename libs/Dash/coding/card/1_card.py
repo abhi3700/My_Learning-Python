@@ -1,5 +1,13 @@
 """
     Simple example
+    NOTE: for keeping images, keep inside "assets/" folder.
+
+    FACT:
+    Including custom CSS or JavaScript in your Dash apps is simple. Just create a folder 
+    named assets in the root of your app directory and include your CSS and JavaScript files 
+    in that folder. Dash will automatically serve all of the files that are included in this 
+    folder. By default the url to request the assets will be /assets but you can customize this 
+    with the assets_url_path argument to dash.Dash.
 """
 import dash
 import dash_bootstrap_components as dbc
@@ -9,8 +17,7 @@ app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 card = dbc.Card(
     [
-        dbc.CardImg(src="/images/placeholder286x180.png", top=True),
-        # dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+        dbc.CardImg(src="/assets/placeholder286x180.png", top=True),
         dbc.CardBody(
             [
                 html.H4("Card title", className="card-title"),

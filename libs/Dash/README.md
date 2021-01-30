@@ -67,3 +67,6 @@ The following packages will be downloaded:
 ## References
 * [Bootstrap Padding & margins](https://devopspoints.com/bootstrap-4-margins-and-padding.html)
 * [Bootstrap Cheatsheet](https://hackerthemes.com/bootstrap-cheatsheet/)
+* [Bootstrap Utilities: Borders, sizing, shadow, colors, display](https://getbootstrap.com/docs/4.3/utilities/borders/)
+* [Dash External Resources: css, js](https://dash.plotly.com/external-resources)
+* [CSS3 Box Shadow](https://www.crazyegg.com/blog/css3-box-shadow/)
