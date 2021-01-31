@@ -70,3 +70,6 @@ The following packages will be downloaded:
 * [Bootstrap Utilities: Borders, sizing, shadow, colors, display](https://getbootstrap.com/docs/4.3/utilities/borders/)
 * [Dash External Resources: css, js](https://dash.plotly.com/external-resources)
 * [CSS3 Box Shadow](https://www.crazyegg.com/blog/css3-box-shadow/)
+* [Mozilla Styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+* [Mozilla CSS guide](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+* [CSS Text fonts](https://www.w3schools.com/css/css_font.asp)
