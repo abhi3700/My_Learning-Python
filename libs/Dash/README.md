@@ -73,3 +73,8 @@ The following packages will be downloaded:
 * [Mozilla Styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 * [Mozilla CSS guide](https://developer.mozilla.org/en-US/docs/Learn/CSS)
 * [CSS Text fonts](https://www.w3schools.com/css/css_font.asp)
+* [Bootstrap UI design snippets](https://www.tutorialrepublic.com/snippets/gallery.php)
+* [Download bootstrap.min.js from here](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js)
+* [Download bootstrap.min.css from here](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
+* [Download jquery.min.js from here](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js)
+* [Bootsnipp: Design elements, playground and code snippets for Bootstrap HTML/CSS/JS framework](https://bootsnipp.com/)
