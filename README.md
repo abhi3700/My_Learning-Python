@@ -47,6 +47,23 @@
 #### [xlwings](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/xlwings.md)		      #package
 #### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib/matplotlib.md)	  #package
 
+### Troubleshooting
+* Error while opening jupyterlab on cmd
+```Console
+Error executing Jupyter command 'lab': [WinError 5] Access is denied
+```
+	- Reason: As the jupyterlab is not installed as Admin during the Anaconda installation. That's why need to be either followed: M-1 or M-2.
+	- Solution 1
+```console
+python -m jupyterlab
+```
+	- Solution 2
+```md
+step1: open your anaconda navigator 
+step2: click on jupyter lab setting option and then remove it
+step2: Now open your anaconda prompt and type the following command "conda install -c conda-forge jupyterlab"
+```
+
 
 ## Github Repos.
 * Python Algorithms - https://github.com/TheAlgorithms/Python
