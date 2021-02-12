@@ -1,7 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -28,7 +28,7 @@ level1_items = [
 app.layout = dbc.Container(
     html.Div(
         id="menu",
-        children=dbc.DropdownMenu(label="Menu", bs_size="lg", children=level1_items,),
+        children=dbc.DropdownMenu(label="Menu", bs_size="lg", children=level1_items),
     )
 )
 
@@ -39,6 +39,7 @@ app.layout = dbc.Container(
     Input("item_4", "n_clicks"),
     Input("item_5", "n_clicks"),
     Input("menu", "n_clicks"),
+    State("submenu", "className"),
 )
 def hide_show_submenu(*_):
     ctx = dash.callback_context
