@@ -293,12 +293,12 @@ df = tables[0]      # first element of the list
 ```py
 #Code snippets for Pandas
 import pandas as pd
-‘’’
+'''
 Reading Files, Selecting Columns, and Summarizing
-‘’’
+'''
 # reading in a file from local computer or directly from a URL
 # various file formats that can be read in out wrote out
-‘’’
+'''
 Format Type     Data Description      Reader           Writer
 text                  CSV            read_csv          to_csv
 text                 JSON            read_json         to_json
@@ -313,7 +313,7 @@ binary                SAS             read_sas
 binary        Python Pickle Format   read_pickle       to_pickle
 SQL                   SQL             read_sql          to_sql
 SQL             Google Big Query      read_gbq          to_gbq
-‘’’
+'''
 #to read about different types of files, and further functionality of reading in files, visit: http://pandas.pydata.org/pandas-docs/version/0.20/io.html
 df = pd.read_csv('local_path/file.csv')
 df = pd.read_csv('https://file_path/file.csv')
@@ -354,9 +354,9 @@ df[df.column_y == 20 ].column_z
 df.shape[0]
 # display the 3 most frequent occurances of column in ‘df’
 df.column_y.value_counts()[0:3]
-‘’’
+'''
 Filtering and Sorting
-‘’’
+'''
 # boolean filtering: only show df with column_z < 20
 filter_bool = df.column_z < 20    # create a Series of booleans…
 df[filter_bool]                # …and use that Series to filter rows
@@ -375,11 +375,14 @@ df.sort_values(‘column_z’, ascending=False)     # use descending order inste
 # Sort dataframe by multiple columns
 df = df.sort([‘col1’,’col2',’col3'],ascending=[1,1,0]) 
  
-# can also filter ‘df’ using pandas.Series.isin 
+# can also filter ‘df’ using pandas.Series.isin for any custom list
+# How To Filter Pandas Dataframe By Values of a Column?
 df[df.column_x.isin([“string_1”, “string_2”])]
-‘’’
+# OR
+df[df["column_x"].isin([“string_1”, “string_2”])]
+'''
 Renaming, Adding, and Removing Columns
-‘’’
+'''
 # rename one or more columns
 df.rename(columns={‘original_column_1’:’column_x’, ‘original_column_2’:’column_y’}, inplace=True) #saves changes 
  
@@ -401,9 +404,9 @@ df.columns = map(str.lower, df.columns)
 df.rename(columns=lambda x: x.split(‘.’)[-1], inplace=True)
  
  
-‘’’
+'''
 Handling Missing Values
-‘’’
+'''
 # missing values are usually excluded by default
 df.column_x.value_counts()             # excludes missing values
 df.column_x.value_counts(dropna=False) # includes missing values
@@ -434,10 +437,10 @@ df.column_x.fillna(value=’NA’, inplace=True)
  
 # turn off the missing value filter
 df = pd.read_csv(‘df.csv’, header=0, names=new_cols, na_filter=False)
-‘’’
+'''
 Split-Apply-Combine
 Diagram: http://i.imgur.com/yjNkiwL.png
-‘’’
+'''
 # for each value in column_x, calculate the mean column_y 
 df.groupby(‘column_x’).column_y.mean()
 # for each value in column_x, count the number of occurrences
@@ -456,9 +459,9 @@ df.groupby([“column_x”,”column_y”]).column_z.mean()
 df.groupby(“column_x”).column_y.value_counts().unstack()
 #conversely, if you want to transform a table into a hierarchical index, use the .stack() method
 df.stack()
-‘’’
+'''
 Selecting Multiple Columns and Filtering Rows
-‘’’
+'''
 # select multiple columns
 my_cols = [‘column_x’, ‘column_y’]  # create a list of column names…
 df[my_cols]                   # …and use that list to select columns
@@ -481,9 +484,9 @@ new_df = df[~df.isin(drop_rows)].dropna(how=’all’)
  
  
  
-‘’’
+'''
 Merging and Concatenating Dataframes
-‘’’ 
+''' 
 #concatenating two dfs together (just smooshes them together, does not pair them in any meaningful way) - axis=1 concats df2 to right side of df1; axis=0 concats df2 to bottom of df1
 new_df = pd.concat([df1, df2], axis=1)
 #merging dfs based on paired columns; columns do not need to have same name, but should match values; left_on column comes from df1, right_on column comes from df2
@@ -494,9 +497,9 @@ new_df = pd.merge(df1[['column_x1', 'column_x2']], df2, left_on='column_x2', rig
 new_df = pd.merge(df1, df2, left_index=True, right_index=True)
  
  
-‘’’
+'''
 Other Frequently Used Features
-‘’’
+'''
 # map existing values to a different set of values
 df[‘column_x’] = df.column_y.map({‘F’:0, ‘M’:1})
 # encode strings as integer values (automatically starts at 0)
@@ -534,9 +537,9 @@ pd.read_csv(‘df.csv’, dtype={‘column_x’:float})
 column_x_dummies = pd.get_dummies(df.column_x).iloc[:, 1:]
 # concatenate two DataFrames (axis=0 for rows, axis=1 for columns)
 df = pd.concat([df, column_x_dummies], axis=1)
-‘’’
+'''
 Less Frequently Used Features
-‘’’
+'''
 # create a DataFrame from a dictionary
 pd.DataFrame({‘column_x’:[‘value_x1’, ‘value_x2’, ‘value_x3’], ‘column_y’:[‘value_y1’, ‘value_y2’, ‘value_y3’]})
 # create a DataFrame from a list of lists
