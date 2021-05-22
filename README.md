@@ -89,7 +89,7 @@ step2: Now open your anaconda prompt and type the following command "conda insta
 * Django with Dash - [Online Documentation](https://django-plotly-dash.readthedocs.io/en/latest/introduction.html), [pip](https://pypi.org/project/django-plotly-dash/)
 * Python all charts - https://python-graph-gallery.com/
 
-## Machine Learning
+## [Machine Learning](https://github.com/abhi3700/My_Learning_AI)
 
 ## References
 * [Pandas dropping rows and columns](https://chrisalbon.com/python/data_wrangling/pandas_dropping_column_and_rows/)
