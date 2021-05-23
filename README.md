@@ -83,6 +83,7 @@ step2: Now open your anaconda prompt and type the following command "conda insta
 * Beautiful formatting in Console - https://github.com/willmcgugan/rich
 * Learning Python through test-driven development of games and puzzles - https://github.com/kyclark/tiny_python_projects
 * Open source home automation that puts local control and privacy first - https://github.com/home-assistant/core
+* Apprise - Push Notifications that work with just about every platform! - https://github.com/caronc/apprise
 
 ## Data Visualization
 * Dash Plotly - https://dash.plot.ly/
