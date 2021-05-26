@@ -45,6 +45,19 @@ trace2 = go.Scatter(
     py.offline.plot(fig, filename= "cp_plot_html_file.html")
     ```
 
+## Troubleshooting
+* When drawing many traces with portion_1, portion_2 as dates then,
+```
+data = [trace1_1, trace1_2, trace2, trace3, trace4, trace5]
+// just replace above line with below one
+data = [trace2, trace1_1, trace1_2, trace3, trace4, trace5]
+
+'''
+    Reason: trace1_1, trace1_2 contained portions of dates, where some data points were missing.
+    So, instead plotted the trace with 'x' instead of 'x1_1' or 'x1_2'
+'''
+```
+
 ## Repositories
 * [WorkCloud Plot](https://github.com/PrashantSaikia/Wordcloud-in-Plotly)
 * [Ploty draw shapes - Rectangle, Circle, line](https://help.plot.ly/documentation/python/shapes/)
