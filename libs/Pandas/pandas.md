@@ -1,10 +1,14 @@
 # `pandas`
-## Installation
-* `$ conda install pandas`
 
-## Coding 
-* ### Loading data using numpy
-**Code:**
+## Installation
+
+- `$ conda install pandas`
+
+## Coding
+
+- ### Loading data using numpy
+  **Code:**
+
 ```py
 data = np.array([['', 'Col1', 'Col2'],
                ['Row1', 1, 2],
@@ -15,47 +19,54 @@ df = pd.DataFrame(data = data[1:, 1:],
                   columns = data[0, 1:])
 print(df)
 ```
+
 **Output**:
+
 ```
      Col1 Col2
 Row1    1    2
 Row2    3    4
 ```
 
-* ### Loading from a dictionary
-**Code:**
+- ### Loading from a dictionary
+  **Code:**
+
 ```py
 dict = {"Litho": ["Verma", "Raja", "Tiwari", "Arpit", "Meena", "Shashikant", "Amit"],
         "Dry": ["Anuvesh", "Vijay", "Zaheer", "Girish", "Abhijit", "Abhishek", ""],
         "ThinFilm": ["Mk Singh", "Luxmi", "Tarun Malviya", "Sunil", "Surya", "", ""],
         "Diffusion": ["Mahesh", "Ravi", "Harmeet", "Deeconda", "", "", ""]
-            
+
 }
 df = pd.DataFrame(dict)
 # df = df.replace(r'^\s*$', np.nan, regex=True)	# replacing the empty box and spaces with NaN using numpy library
 print(df)
 ```
+
 **Output:**
+
 ```
        Litho       Dry       ThinFilm Diffusion
 0       Verma   Anuvesh       Mk Singh    Mahesh
 1        Raja     Vijay          Luxmi      Ravi
 2      Tiwari    Zaheer  Tarun Malviya   Harmeet
 3       Arpit    Girish          Sunil  Deeconda
-4       Meena   Abhijit          Surya          
-5  Shashikant  Abhishek                         
-6        Amit                                   
+4       Meena   Abhijit          Surya
+5  Shashikant  Abhishek
+6        Amit
 ```
 
-* ### Loading from a `.csv` file
-**Data:** [countries.csv](https://github.com/abhi3700/My_learning-Python/blob/master/data/countries.csv) <br/>
-**Code**:
+- ### Loading from a `.csv` file
+  **Data:** [countries.csv](https://github.com/abhi3700/My_learning-Python/blob/master/data/countries.csv) <br/>
+  **Code**:
+
 ```py
 data = pd.read_csv('countries.csv')
 print(data)
 print(data.head(6))		# head of the dataframe
 print(data.tail(6))		# tail of the dataframe
 ```
+
 <details>
     <summary><b>Output:<b></summary>
 <p>
@@ -75,30 +86,33 @@ print(data.tail(6))		# tail of the dataframe
 1703     Zimbabwe  2007    12311143
 
 [1704 rows x 3 columns]
-       country  year  population
-0  Afghanistan  1952     8425333
-1  Afghanistan  1957     9240934
-2  Afghanistan  1962    10267083
-3  Afghanistan  1967    11537966
-4  Afghanistan  1972    13079460
-5  Afghanistan  1977    14880372
-       country  year  population
-1698  Zimbabwe  1982     7636524
-1699  Zimbabwe  1987     9216418
-1700  Zimbabwe  1992    10704340
-1701  Zimbabwe  1997    11404948
-1702  Zimbabwe  2002    11926563
-1703  Zimbabwe  2007    12311143
-```
+country year population
+0 Afghanistan 1952 8425333
+1 Afghanistan 1957 9240934
+2 Afghanistan 1962 10267083
+3 Afghanistan 1967 11537966
+4 Afghanistan 1972 13079460
+5 Afghanistan 1977 14880372
+country year population
+1698 Zimbabwe 1982 7636524
+1699 Zimbabwe 1987 9216418
+1700 Zimbabwe 1992 10704340
+1701 Zimbabwe 1997 11404948
+1702 Zimbabwe 2002 11926563
+1703 Zimbabwe 2007 12311143
+
+````
 </p>
 </details>
 
 * ### print a dataframe column (without index) or (as list)
 ```py
 emission['GHG'].tolist()
-```
-* ### fill merged cells with same data
+````
+
+- ### fill merged cells with same data
   Given data:
+
 ```
         Sample  CD4     CD8
 Day 1   8311    17.3    6.44
@@ -110,7 +124,9 @@ Day 2   8311    16.0    4.92
         8321    13.0    4.34
         8322    10.6    1.95
 ```
-  Required output:
+
+Required output:
+
 ```
        Sample    CD4   CD8
 Day 1    8311  17.30  6.44
@@ -122,29 +138,35 @@ Day 2    8312   5.67  2.28
 Day 2    8321  13.00  4.34
 Day 2    8322  10.60  1.95
 ```
-  For the above required output, do this -
+
+For the above required output, do this -
+
 ```py
 df.index = pd.Series(df.index).fillna(method='ffill')
 
 # if index column is named as 'Date' column, then:
 df_frst1_thick['Date'] = pd.Series(df_frst1_thick['Date']).fillna(method='ffill')       # fill merged cells with same values
 ```
-  > NOTE: But this cannot be applied to 'Remarks' column especially where, there are empty cells after merged cell, like this
+
+> NOTE: But this cannot be applied to 'Remarks' column especially where, there are empty cells after merged cell, like this
+
   <p align="left">
-    <img src="./images/merged_cells_in_excel.png" alt="Merged cells in Excel" width="" height="">
+    <img src="./img/merged_cells_in_excel.png" alt="Merged cells in Excel" width="" height="">
   </p>
 
+- sort the column in pandas dataframe
 
-* sort the column in pandas dataframe
 ```py
-# Import pandas package  
-import pandas as pd  
-# making data frame  
-data = pd.read_csv("nba.csv")  
+# Import pandas package
+import pandas as pd
+# making data frame
+data = pd.read_csv("nba.csv")
 # using sorted() method to return the list of columns sorted in alphabetical order.
-sorted(data) 
+sorted(data)
 ```
-* index, labels
+
+- index, labels
+
 ```py
 # Single selections using iloc and DataFrame
 # Rows:
@@ -163,18 +185,24 @@ data.iloc[[0,3,6,24], [0,5,6]] # 1st, 4th, 7th, 25th row + 1st 6th 7th columns.
 data.iloc[0:5, 5:8] # first 5 rows and 5th, 6th, 7th columns of data frame (county -> phone1).
 data.iloc[1,:].tolist()   # ['11/2/2011', 'Matress', 1500, 1450, 10] returns index 1 with all columns
 ```
-  [Reference](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)
-* ### Filter out the dataframe based on value(s) in a column of dataframe
+
+[Reference](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)
+
+- ### Filter out the dataframe based on value(s) in a column of dataframe
+
 ```py
 # display dataframe with rows having 'ALBERTA INFRASTRUCTURE' in 'COMPANY NAME' column
 df_search = df.loc[df['COMPANY NAME'].isin(['ALBERTA INFRASTRUCTURE'])]
 ```
+
 ```md
-COMPANY NAME	LOCATION	PHONE	ADDRESS	Second ship address	CONTACT 1
-ALBERTA INFRASTRUCTURE	DEVON, AB	(780) 987-8799	#1 OIL PATCH DRIVE, SUITE A232		
-ALBERTA INFRASTRUCTURE	EDMONTON, AB		ROOM 583 TERRACE BUILDING		
+COMPANY NAME LOCATION PHONE ADDRESS Second ship address CONTACT 1
+ALBERTA INFRASTRUCTURE DEVON, AB (780) 987-8799 #1 OIL PATCH DRIVE, SUITE A232
+ALBERTA INFRASTRUCTURE EDMONTON, AB ROOM 583 TERRACE BUILDING
 ```
-* ### Insert, Assign column to existing Dataframe
+
+- ### Insert, Assign column to existing Dataframe
+
 ```py
 # M-1
 df_biom.insert(2, column= "Section", value= np.nan)          # Insert 'Section' column at position -2 i.e. 3rd column
@@ -189,33 +217,43 @@ df.assign(temp_f=lambda x: x['temp_c'] * 9 / 5 + 32,
 # Portland    17.0    62.6  290.15
 # Berkeley    25.0    77.0  298.15
 ```
-* ### Delete a row based on value in a column
+
+- ### Delete a row based on value in a column
+
 ```py
 df_biom_pie_plot = df_biom[df_biom['Section'] != 'GH']      # filter-out 'GH' from dataframe
 ```
-* ### To find out which rows have NaNs in a specific column:
+
+- ### To find out which rows have NaNs in a specific column:
+
 ```py
 df_nan_rows = df[df['name column'].isnull()]
 ```
-* ### To find out which rows do not have NaNs in a specific column:
+
+- ### To find out which rows do not have NaNs in a specific column:
+
 ```py
 df_non_nan_rows = df[df['name column'].notnull()]
 ```
-* ### Filter out the dataframe with all null values in multiple columns
-```py
 
-```
-* ### CSV to Pandas dataframe (Read CSV)
+- ### Filter out the dataframe with all null values in multiple columns
+<!-- TODO: Add code snippet -->
+- ### CSV to Pandas dataframe (Read CSV)
+
 ```py
 import pandas as pd
 df_a = pd.read_csv('../keys/A.csv')
 ```
-* ### Pandas dataframe to PostgreSQL (Upload)
+
+- ### Pandas dataframe to PostgreSQL (Upload)
+
 ```py
 import d6tstack.utils as du
 du.pd_to_psql(df_a, cfg_uri_psql, 'product_a', if_exists='replace')
 ```
+
 > NOTE: this technique is to slow
+
 ```py
 '''
   This takes 14 sec to upload to SQL DB table - 'product_a'
@@ -223,8 +261,11 @@ du.pd_to_psql(df_a, cfg_uri_psql, 'product_a', if_exists='replace')
 sqlengine = sqlalchemy.create_engine(cfg_uri_psql)
 df_a.to_sql('product_a', con= sqlengine, if_exists='replace', index= False)
 ```
-  [Refer](https://github.com/d6t/d6tstack/blob/master/examples-sql.ipynb)
-* ### PostgreSQL to Pandas dataframe (Download)
+
+[Refer](https://github.com/d6t/d6tstack/blob/master/examples-sql.ipynb)
+
+- ### PostgreSQL to Pandas dataframe (Download)
+
 ```py
 import pandas as pd
 import sqlalchemy
@@ -240,17 +281,23 @@ df_sql_a = pd.read_sql_table('product_a', con= DATABASE_URL)
 print(df_sql_a.head())
 
 ```
-* ### Pandas dataframe to CSV (write modified dataframe to CSV)
+
+- ### Pandas dataframe to CSV (write modified dataframe to CSV)
+
 ```py
 df_sql_a.to_csv('keys/A.csv', index= False)
 ```
-* ### Reset index of a dataframe
+
+- ### Reset index of a dataframe
+
 ```py
 # Computationally it is the fastest. Refer: https://stackoverflow.com/a/45692117
-df.index = pd.RangeIndex(len(df.index))     # reset index 
+df.index = pd.RangeIndex(len(df.index))     # reset index
 
 ```
-* ### Info, size of a dataframe, Series
+
+- ### Info, size of a dataframe, Series
+
 ```
 pandas.DataFrame
 ================
@@ -265,31 +312,39 @@ pandas.Series
 =============
 Get the number of elements: `len(s)`, `s.size`
 ```
-* Fetch Excel file
-	- choose `pd.read_csv()` over `pd.ExcelFile()` as later is class and eventually fetched from this class.
-	- [pd.read_csv vs pd.ExcelFile](https://stackoverflow.com/a/49991054)
-* Round off values in a column in dataframe
+
+- Fetch Excel file
+  - choose `pd.read_csv()` over `pd.ExcelFile()` as later is class and eventually fetched from this class.
+  - [pd.read_csv vs pd.ExcelFile](https://stackoverflow.com/a/49991054)
+- Round off values in a column in dataframe
+
 ```py
-# round off the columns in this manner 
-# "A" to 1 decimal place 
-# "B" to 2 decimal place 
-# "C" to 3 decimal place 
-# "D" to 4 decimal place 
-  
-df.round({"A":1, "B":2, "C":3, "D":4}) 
+# round off the columns in this manner
+# "A" to 1 decimal place
+# "B" to 2 decimal place
+# "C" to 3 decimal place
+# "D" to 4 decimal place
+
+df.round({"A":1, "B":2, "C":3, "D":4})
 ```
-* Delete a column from dataframe
+
+- Delete a column from dataframe
+
 ```py
 df.drop(['A'], axis = 1)
 ```
-* fetch html file with xls extension into dataframe
+
+- fetch html file with xls extension into dataframe
+
 ```py
 tables = pd.read_html('../data/Data.xls')       # returns a list of tables
 df = tables[0]      # first element of the list
 ```
 
 ## Pandas at a glance
+
 [Reference](https://medium.com/@msalmon00/helpful-python-code-snippets-for-data-exploration-in-pandas-b7c5aed5ecb9)
+
 ```py
 #Code snippets for Pandas
 import pandas as pd
@@ -309,7 +364,7 @@ binary            HDF5 Format        read_hdf           to_hdf
 binary           Feather Format     read_feather      to_feather
 binary              Msgpack         read_msgpack      to_msgpack
 binary               Stata           read_stata        to_stata
-binary                SAS             read_sas 
+binary                SAS             read_sas
 binary        Python Pickle Format   read_pickle       to_pickle
 SQL                   SQL             read_sql          to_sql
 SQL             Google Big Query      read_gbq          to_gbq
@@ -342,14 +397,14 @@ df.describe(include=’all’)      # describe all columns
 df.column_y.describe()   # describe a single column
 df.column_z.mean()       # only calculate the mean
 df[“column_z”].mean()    # alternate method for calculating mean
- 
+
 # count the number of occurrences of each value
 df.column_y.value_counts()   # most useful for categorical variables, but can also be used with numeric variables
 #filter df by one column, and print out values of another column
 #when using numeric values, no quotations
 df[df.column_y == “string_value”].column_z
-df[df.column_y == 20 ].column_z    
- 
+df[df.column_y == 20 ].column_z
+
 # display only the number of rows of the ‘df’ DataFrame
 df.shape[0]
 # display the 3 most frequent occurances of column in ‘df’
@@ -363,18 +418,18 @@ df[filter_bool]                # …and use that Series to filter rows
 df[filter_bool].describe()     # describes a data frame filtered by filter_bool
 df[df.column_z < 20]           # or, combine into a single step
 df[df.column_z < 20].column_x  # select one column from the filtered results
-df[df[“column_z”] < 20].column_x     # alternate method 
+df[df[“column_z”] < 20].column_x     # alternate method
 df[df.column_z < 20].column_x.value_counts()   # value_counts of resulting Series, can also use .mean(), etc. instead of .value_counts()
 # boolean filtering with multiple conditions; indexes are in square brackets, conditions are in parens
-df[(df.column_z < 20) & (df.column_y==’string’)] # ampersand for AND condition 
+df[(df.column_z < 20) & (df.column_y==’string’)] # ampersand for AND condition
 df[(df.column_z < 20) | (df.column_z > 60)] # pipe for OR condition
 # sorting
 df.column_z.order()          # sort a column
 df.sort_values(‘column_z’)   # sort a DataFrame by a single column
 df.sort_values(‘column_z’, ascending=False)     # use descending order instead
 # Sort dataframe by multiple columns
-df = df.sort([‘col1’,’col2',’col3'],ascending=[1,1,0]) 
- 
+df = df.sort([‘col1’,’col2',’col3'],ascending=[1,1,0])
+
 # can also filter ‘df’ using pandas.Series.isin for any custom list
 # How To Filter Pandas Dataframe By Values of a Column?
 df[df.column_x.isin([“string_1”, “string_2”])]
@@ -384,8 +439,8 @@ df[df["column_x"].isin([“string_1”, “string_2”])]
 Renaming, Adding, and Removing Columns
 '''
 # rename one or more columns
-df.rename(columns={‘original_column_1’:’column_x’, ‘original_column_2’:’column_y’}, inplace=True) #saves changes 
- 
+df.rename(columns={‘original_column_1’:’column_x’, ‘original_column_2’:’column_y’}, inplace=True) #saves changes
+
 # replace all column names (in place)
 new_cols = [‘column_x’, ‘column_y’, ‘column_z’]
 df.columns = new_cols
@@ -402,8 +457,8 @@ df.columns = map(str.lower, df.columns)
 # Even more fancy DataFrame column re-naming
 # lower-case all DataFrame column names (for example)
 df.rename(columns=lambda x: x.split(‘.’)[-1], inplace=True)
- 
- 
+
+
 '''
 Handling Missing Values
 '''
@@ -430,18 +485,18 @@ df.isnull().sum() # count the missing values in each column
 df.dropna(inplace=True)   # drop a row if ANY values are missing, defaults to rows, but can be applied to columns with axis=1
 df.dropna(how=’all’, inplace=True)  # drop a row only if ALL values are missing
 # fill in missing values
-df.column_x.fillna(value=’NA’, inplace=True) 
+df.column_x.fillna(value=’NA’, inplace=True)
 # fill in missing values with ‘NA’
 # value does not have to equal a string — can be set as some calculated value like df.column_x.mode(), or just a number like 0
- 
- 
+
+
 # turn off the missing value filter
 df = pd.read_csv(‘df.csv’, header=0, names=new_cols, na_filter=False)
 '''
 Split-Apply-Combine
 Diagram: http://i.imgur.com/yjNkiwL.png
 '''
-# for each value in column_x, calculate the mean column_y 
+# for each value in column_x, calculate the mean column_y
 df.groupby(‘column_x’).column_y.mean()
 # for each value in column_x, count the number of occurrences
 df.column_x.value_counts()
@@ -481,12 +536,12 @@ df.iloc[0:3, :]        # rows in position 0/1/2, all columns
 #filtering out and dropping rows based on condition (e.g., where column_x values are null)
 drop_rows = df[df[“column_x”].isnull()]
 new_df = df[~df.isin(drop_rows)].dropna(how=’all’)
- 
- 
- 
+
+
+
 '''
 Merging and Concatenating Dataframes
-''' 
+'''
 #concatenating two dfs together (just smooshes them together, does not pair them in any meaningful way) - axis=1 concats df2 to right side of df1; axis=0 concats df2 to bottom of df1
 new_df = pd.concat([df1, df2], axis=1)
 #merging dfs based on paired columns; columns do not need to have same name, but should match values; left_on column comes from df1, right_on column comes from df2
@@ -495,8 +550,8 @@ new_df = pd.merge(df1, df2, left_on=’column_x’, right_on=’column_y’)
 new_df = pd.merge(df1[['column_x1', 'column_x2']], df2, left_on='column_x2', right_on='column_y')
 #merging two dataframes based on shared index values (left is df1, right is df2)
 new_df = pd.merge(df1, df2, left_index=True, right_index=True)
- 
- 
+
+
 '''
 Other Frequently Used Features
 '''
@@ -512,7 +567,7 @@ df.column_y.replace(‘old_string’, ‘new_string’, inplace=True)
 #alter values in one column based on values in another column (changes occur in place)
 #can use either .loc or .ix methods
 df.loc[df[“column_x”] == 5, “column_y”] = 1
- 
+
 df.ix[df.column_x == “string_value”, “column_y”] = “new_string_value”
 #transpose data frame (i.e. rows become columns, columns become rows)
 df.T
@@ -565,7 +620,7 @@ df[‘newcol’] = df[‘col1’].map(str) + df[‘col2’].map(str)
 # Doing calculations with DataFrame columns that have missing values
 # In example below, swap in 0 for df[‘col1’] cells that contain null
 df[‘new_col’] = np.where(pd.isnull(df[‘col1’]),0,df[‘col1’]) + df[‘col2’]
- 
+
 # display a cross-tabulation of two Series
 pd.crosstab(df.column_x, df.column_y)
 # alternative syntax for boolean filtering (noted as “experimental” in the documentation)
