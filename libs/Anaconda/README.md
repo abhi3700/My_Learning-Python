@@ -94,6 +94,8 @@ conda update --prefix F:\Softwares\Anaconda3 anaconda
 
 ## Shortcuts
 
+### Windows
+
 - Open Jupyter notebook using `$ jupyter notebook` on terminal (win 10) in a preferable directory.
   E.g.:
   - goto "F:\Coding\jupyter-notebook"
@@ -139,6 +141,19 @@ matrix,matrix.diagonal()
         [3, 8, 9]]),
  array([1, 4, 9]))
 ```
+
+### macOS
+
+- Open Jupyter notebook using `$ jupyter notebook` on terminal (win 10) in a preferable directory.
+  E.g.:
+  - goto "/Users/abhi3700/F/coding/jupyter-notebook"
+  - open terminal here & type `$ jupyter notebook` on terminal.
+- All the packages installed using conda present in this directory - `"/Users/abhi3700/opt/anaconda3/lib/python3.9/site-packages/"`. Also `"/Users/abhi3700/opt/anaconda3/bin/"`
+- All the packages installed using conda present in this directory -
+- Various environments created inside conda are present in this directory via `❯ conda env list`: `"/Users/abhi3700/opt/anaconda3"`
+- Config directory is maintained in this directory - `"/Users/abhi3700/.jupyter"` via `❯ jupyter --config-dir`
+- Runtime directory is maintained in this directory - `"/Users/abhi3700/Library/Jupyter/runtime"` via `❯ jupyter --runtime-dir`
+- Data directory is maintained in this directory - `"/Users/abhi3700/Library/Jupyter"` via `❯ jupyter --data-dir`
 
 ## `conda` package manager
 
