@@ -10,14 +10,16 @@
 
 ## Installation
 
-### How I use?
+### OS
+
+#### Windows (with WSL Ubuntu)
 
 - Editor (with suggestion): Sublime Text 3 (Crack version with setup), [suggestion](#sublime-text-3-recommended-editor)
 - Interpreter
   - Anaconda (on Windows)
   - Python3 (on Linux (Ubuntu)) (If required)
 
-### Tools:
+#### Linux
 
 - [Linux (Ubuntu)]: `sudo apt install python3`
 
@@ -36,15 +38,26 @@
 
 > Note: It depends on the project. If it consists of multiple dependent python files, then use ST3, otherwise use Jupyter Notebook.
 
-- #### Sublime Text 3 ([RECOMMENDED] Editor)
-  - For Python, ST3 is recommended for editing.
-  - Anaconda installed & added to PATH in Windows.
-  - **Packages**
-    - [Anaconda](https://packagecontrol.io/packages/Anaconda)
-  - **Build system**
-    - default
-  - **Snippet**
-    - None
+#### macOS
+
+- Install Anaconda
+- package manager: `conda`, `pip3`. All the packages are installed in this folder `$HOME/opt/anaconda3/bin/python3.7/site-packages/`
+- Editor: VSC (Visual Studio Code) with Python, Jupyter extension packages.
+
+### Tools
+
+#### Sublime Text 3
+
+- For Python, ST3 is recommended for editing.
+- Anaconda installed & added to PATH in Windows.
+- **Packages**
+  - [Anaconda](https://packagecontrol.io/packages/Anaconda)
+- **Build system**
+  - default
+- **Snippet**
+  - None
+
+#### [Visual Studio Code](https://github.com/abhi3700/my_coding_toolkit/blob/main/vsc_all.md)
 
 #### [Anaconda](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/anaconda.md) #packagemanager
 
@@ -79,7 +92,7 @@ step2: click on jupyter lab setting option and then remove it
 step2: Now open your anaconda prompt and type the following command "conda install -c conda-forge jupyterlab"
 ```
 
-### 2. moduleNotFoundError: No module named '...'
+### 2. moduleNotFoundError: No module named '...' on macOS
 
 - Reason: This error is when importing package from anaconda packages on macOS. As the package is not installed in the `pip` environment, but in `conda` environment, `python3` is not able to find the package.
 - Solution:
@@ -92,6 +105,24 @@ export PATH="$HOME/opt/anaconda3/bin/:$PATH"
 ```
 
 Now, you can import the package successfully inside Jupyter Notebook & also in a separate python file.
+
+### 3. Jupyter kernel issue on macOS
+
+- Reason: When using jupyter notebook on macOS, it shows the following error:
+
+```console
+No kernel found
+```
+
+- Solution:
+
+  - M-1: Install the kernel for the python version you are using. For example, if using python3.9, then install the kernel for python3.9.
+
+  ```console
+  python3.9 -m pip install ipykernel
+  ```
+
+  - M-2: Connect to a already running jupyter notebook kernel. Just run `$ jupyter notebook` command in the directory where the notebook is present.
 
 ## Github Repos.
 
@@ -134,6 +165,10 @@ Now, you can import the package successfully inside Jupyter Notebook & also in a
 ## Code
 
 - https://towardsdatascience.com/elements-of-functional-programming-in-python-1b295ea5bbe0
+
+```
+
+```
 
 ```
 

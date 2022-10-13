@@ -148,7 +148,7 @@ matrix,matrix.diagonal()
   E.g.:
   - goto "/Users/abhi3700/F/coding/jupyter-notebook"
   - open terminal here & type `$ jupyter notebook` on terminal.
-- All the packages installed using conda present in this directory - `"/Users/abhi3700/opt/anaconda3/lib/python3.9/site-packages/"`. Also `"/Users/abhi3700/opt/anaconda3/bin/"`
+- All the packages installed using conda present in this directory - `"/Users/abhi3700/opt/anaconda3/lib/python3.9/site-packages/"`. And the `"/Users/abhi3700/opt/anaconda3/bin/"` is a binary file. So, use like a command `$ python3.9 test.py` or `$ python3.9` or `$ python3`
 - All the packages installed using conda present in this directory -
 - Various environments created inside conda are present in this directory via `❯ conda env list`: `"/Users/abhi3700/opt/anaconda3"`
 - Config directory is maintained in this directory - `"/Users/abhi3700/.jupyter"` via `❯ jupyter --config-dir`
