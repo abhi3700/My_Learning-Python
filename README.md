@@ -42,6 +42,7 @@
 
 - Install Anaconda
 - package manager: `conda`, `pip3`. All the packages are installed in this folder `$HOME/opt/anaconda3/bin/python3.7/site-packages/`
+  > It is recommended to install the packages using `pip3` & then it would show in `conda list` as well along with `pip3 list`.
 - Editor: VSC (Visual Studio Code) with Python, Jupyter extension packages.
 
 ### Tools
