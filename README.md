@@ -10,16 +10,14 @@
 
 ## Installation
 
-### OS
-
-#### Windows (with WSL Ubuntu)
+### Windows (with WSL Ubuntu)
 
 - Editor (with suggestion): Sublime Text 3 (Crack version with setup), [suggestion](#sublime-text-3-recommended-editor)
 - Interpreter
   - Anaconda (on Windows)
   - Python3 (on Linux (Ubuntu)) (If required)
 
-#### Linux
+### Linux
 
 - [Linux (Ubuntu)]: `sudo apt install python3`
 
@@ -38,16 +36,26 @@
 
 > Note: It depends on the project. If it consists of multiple dependent python files, then use ST3, otherwise use Jupyter Notebook.
 
-#### macOS
+### macOS
+
+#### Installation
 
 - Install Anaconda
 - package manager: `conda`, `pip3`. All the packages are installed in this folder `$HOME/opt/anaconda3/bin/python3.7/site-packages/`
   > It is recommended to install the packages using `pip3` & then it would show in `conda list` as well along with `pip3 list`.
 - Editor: VSC (Visual Studio Code) with Python, Jupyter extension packages.
 
-### Tools
+#### Uninstallation
 
-#### Sublime Text 3
+1. Open terminal on `~` directory.
+2. Run `conda install anaconda-clean`
+3. Run `anaconda-clean --yes`
+4. Run `rm -rf ~/opt/anaconda3`
+5. Close and reopen your terminal to refresh it. You should no longer see `(base)` in your terminal prompt.
+
+## Editors
+
+### Sublime Text 3
 
 - For Python, ST3 is recommended for editing.
 - Anaconda installed & added to PATH in Windows.
@@ -58,17 +66,21 @@
 - **Snippet**
   - None
 
-#### [Visual Studio Code](https://github.com/abhi3700/my_coding_toolkit/blob/main/vsc_all.md)
+### [Visual Studio Code](https://github.com/abhi3700/my_coding_toolkit/blob/main/vsc_all.md)
 
-#### [Anaconda](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/anaconda.md) #packagemanager
+## Tools
 
-#### [Pip](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pip.md) #packagemanager
+### [Anaconda](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/anaconda.md) #packagemanager
 
-#### [pandas](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pandas.md) #package
+### [Pip](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pip.md) #packagemanager
 
-#### [xlwings](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/xlwings.md) #package
+## Libraries
 
-#### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib/matplotlib.md) #package
+### [pandas](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pandas.md) #package
+
+### [xlwings](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/xlwings.md) #package
+
+### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib/matplotlib.md) #package
 
 ## Troubleshooting
 
