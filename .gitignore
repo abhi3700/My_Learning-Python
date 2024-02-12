@@ -3,3 +3,4 @@
 .ipynb*
 .env
 test*
+.DS_Store
