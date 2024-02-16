@@ -1,14 +1,16 @@
 # My_learning-Python
 
-### Learn Python:
+## Description
 
-- #### Object Oriented Programming (OOP), Functional Programming (FP)
-- #### Data Science
-- #### Machine Learning
-- #### Web Development
-- #### Chatbot
+Learn Python for using in the following domains:
 
-## Installation
+- Object Oriented Programming (OOP), Functional Programming (FP)
+- Data Science
+- Machine Learning
+- Web Development
+- Chatbot
+
+## Install
 
 ### Windows (with WSL Ubuntu)
 
@@ -38,14 +40,35 @@
 
 ### macOS
 
-#### Installation
+1. python3 comes pre-installed in macOS. Check using `$ python3 --version` command.
+2. Install `pip` (aka `pip3`) using:
 
-- Install Anaconda
-- package manager: `conda`, `pip3`. All the packages are installed in this folder `$HOME/opt/anaconda3/bin/python3.7/site-packages/`
-  > It is recommended to install the packages using `pip3` & then it would show in `conda list` as well along with `pip3 list`.
-- Editor: VSC (Visual Studio Code) with Python, Jupyter extension packages.
+  ```sh
+  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  python3 get-pip.py
+  ```
 
-#### Uninstallation
+  > It is recommended to install the packages using `pip3` (not `conda`) (aka `pip`, found pointing to same **python3.x** version in their binary using `$ which pip or pip3` command) `pip list`.
+
+  In order to know which python3 version is linked to `pip` or `pip3`, use `$ pip --version` or `$ pip3 --version` command.
+
+3. Project Management tool: `huak` is recommended, but `poetry` is also good, but 10x slow.
+
+4. <u>Editor</u>: VSC (Visual Studio Code)
+   - Extensions
+     - Python
+     - Jupyter extension packages
+     - [pylyzer](https://marketplace.visualstudio.com/items?itemName=pylyzer.pylyzer)
+     - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) & many others.
+
+5. Enable Auto-complete suggestion: For enabling autocomplete suggestion, add this line in `settings.json`:
+
+  ```json
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": ["/opt/homebrew/lib/python3.11/site-packages"]
+  ```
+  
+To uninstall, follow this:
 
 1. Open terminal on `~` directory.
 2. Run `conda install anaconda-clean`
@@ -55,9 +78,10 @@
 
 ## Editors
 
-### Sublime Text 3
+### Sublime Text 3 [DEPRECATED]
 
-- For Python, ST3 is recommended for editing.
+> I don't use it anymore.
+
 - Anaconda installed & added to PATH in Windows.
 - **Packages**
   - [Anaconda](https://packagecontrol.io/packages/Anaconda)
@@ -66,44 +90,44 @@
 - **Snippet**
   - None
 
-### [Visual Studio Code](https://github.com/abhi3700/my_coding_toolkit/blob/main/vsc_all.md)
+### [Visual Studio Code](https://github.com/abhi3700/my_coding_toolkit/blob/main/vsc_all.md) [RECOMMENDED]
 
-## Tools
+## Package managers
 
-### [Anaconda](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/anaconda.md) #packagemanager
-
-### [Pip](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pip.md) #packagemanager
+- [Anaconda](./libs/anaconda.md)
+- [Pip](./libs/pip.md)
 
 ## Libraries
 
-### [pandas](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/pandas.md) #package
+- [pandas](./libs/pandas.md)
+- [xlwings](./libs/xlwings.md)
+- [matplotlib](./libs/matplotlib/matplotlib.md)
+- [plotly](./libs/Plotly/README.md)
+- Formatter: `ruff`, `black`, `autopep8`, `yapf`
 
-### [xlwings](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/xlwings.md) #package
-
-### [matplotlib](https://github.com/abhi3700/My_Learning-Python/blob/master/libs/matplotlib/matplotlib.md) #package
-
-## Troubleshooting
+## Troubleshoot
 
 ### 1. Error while opening jupyterlab on cmd
 
-```Console
+```sh
 Error executing Jupyter command 'lab': [WinError 5] Access is denied
 ```
 
-    - Reason: As the jupyterlab is not installed as Admin during the Anaconda installation. That's why need to be either followed: M-1 or M-2.
-    - Solution 1
+- *Cause*: As the jupyterlab is not installed as Admin during the Anaconda installation. That's why need to be either followed: M-1 or M-2.
+- *Solution*:
+  - M-1:
 
-```console
-python -m jupyterlab
-```
+  ```sh
+  python3 -m jupyterlab
+  ```
 
-    - Solution 2
+  - M-2:
 
-```md
-step1: open your anaconda navigator
-step2: click on jupyter lab setting option and then remove it
-step2: Now open your anaconda prompt and type the following command "conda install -c conda-forge jupyterlab"
-```
+  ```md
+  step-1: open your anaconda navigator
+  step-2: click on jupyter lab setting option and then remove it
+  step-3: Now open your anaconda prompt and type the following command `conda install -c conda-forge jupyterlab1
+  ```
 
 ### 2. moduleNotFoundError: No module named '...' on macOS
 
@@ -131,38 +155,38 @@ No kernel found
 
   - M-1: Install the kernel for the python version you are using. For example, if using python3.9, then install the kernel for python3.9.
 
-  ```console
+  ```sh
   python3.9 -m pip install ipykernel
   ```
 
   - M-2: Connect to a already running jupyter notebook kernel. Just run `$ jupyter notebook` command in the directory where the notebook is present.
 
-## Github Repos.
+## Github Repositories
 
-- Python Algorithms - https://github.com/TheAlgorithms/Python
-- HackerRank Problems and Solutions - https://github.com/juhilsomaiya/HackerRank-Python-Algorithm-Solution
-- Plotly Offline Charts - https://github.com/SayaliSonawane/Plotly_Offline_Python
-- Plotly Dashboards with Dash - https://github.com/Pierian-Data/Plotly-Dashboards-with-Dash
-- Plotly Datasets - https://github.com/plotly/datasets
-- Dash plotly recipes (for discussion forum) - https://github.com/plotly/dash-recipes
-- Pandas Exercises - https://github.com/guipsamora/pandas_exercises
-- Zulip (powerful open source team chat) - https://github.com/zulip/zulip
+- Python Algorithms - <https://github.com/TheAlgorithms/Python>
+- HackerRank Problems and Solutions - <https://github.com/juhilsomaiya/HackerRank-Python-Algorithm-Solution>
+- Plotly Offline Charts - <https://github.com/SayaliSonawane/Plotly_Offline_Python>
+- Plotly Dashboards with Dash - <https://github.com/Pierian-Data/Plotly-Dashboards-with-Dash>
+- Plotly Datasets - <https://github.com/plotly/datasets>
+- Dash plotly recipes (for discussion forum) - <https://github.com/plotly/dash-recipes>
+- Pandas Exercises - <https://github.com/guipsamora/pandas_exercises>
+- Zulip (powerful open source team chat) - <https://github.com/zulip/zulip>
 - Code Beautify (into Image) - [LINK](<https://carbon.now.sh/?bg=rgba(48%2C127%2C194%2C1)&t=monokai&wt=none&l=yaml&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=4x&wm=false&code=worker%253A%2520python%2520app%252Fbot.py>)
-- Dash Bootstrap Components - https://dash-bootstrap-components.opensource.faculty.ai/
+- Dash Bootstrap Components - <https://dash-bootstrap-components.opensource.faculty.ai/>
 - Automate docs with Python - [Documentation](https://python-docx.readthedocs.io/en/latest/), [Github](https://github.com/python-openxml/python-docx), [pip](https://pypi.org/project/python-docx/), [Example](https://pbpython.com/python-word-template.html)
 - Automate PPT with Python - [Documentation](https://python-pptx.readthedocs.io/en/latest/), [Github](https://github.com/scanny/python-pptx), [pip](https://pypi.org/project/python-pptx/)
 - Python Geocoding Toolbox (location, coordinates, address, street, city, country) - [pip](https://pypi.org/project/geopy/), [example](https://chrisalbon.com/python/data_wrangling/geolocate_a_city_and_country/)
-- Geocoding and reverse geocoding using Python - https://chrisalbon.com/python/data_wrangling/geocoding_and_reverse_geocoding/
-- Beautiful formatting in Console - https://github.com/willmcgugan/rich
-- Learning Python through test-driven development of games and puzzles - https://github.com/kyclark/tiny_python_projects
-- Open source home automation that puts local control and privacy first - https://github.com/home-assistant/core
-- Apprise - Push Notifications that work with just about every platform! - https://github.com/caronc/apprise
+- Geocoding and reverse geocoding using Python - <https://chrisalbon.com/python/data_wrangling/geocoding_and_reverse_geocoding/>
+- Beautiful formatting in Console - <https://github.com/willmcgugan/rich>
+- Learning Python through test-driven development of games and puzzles - <https://github.com/kyclark/tiny_python_projects>
+- Open source home automation that puts local control and privacy first - <https://github.com/home-assistant/core>
+- Apprise - Push Notifications that work with just about every platform! - <https://github.com/caronc/apprise>
 
 ## Data Visualization
 
-- Dash Plotly - https://dash.plot.ly/
+- Dash Plotly - <https://dash.plot.ly/>
 - Django with Dash - [Online Documentation](https://django-plotly-dash.readthedocs.io/en/latest/introduction.html), [pip](https://pypi.org/project/django-plotly-dash/)
-- Python all charts - https://python-graph-gallery.com/
+- Python all charts - <https://python-graph-gallery.com/>
 
 ## [Machine Learning](https://github.com/abhi3700/My_Learning_AI)
 
@@ -177,12 +201,4 @@ No kernel found
 
 ## Code
 
-- https://towardsdatascience.com/elements-of-functional-programming-in-python-1b295ea5bbe0
-
-```
-
-```
-
-```
-
-```
+- <https://towardsdatascience.com/elements-of-functional-programming-in-python-1b295ea5bbe0>
