@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openai-demo"
+version = "0.0.1"
+description = ""
+dependencies = [
+    "openai ==1.12.0",
+    "pandas ==2.2.0",
+    "pyarrow ==15.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build==1.0.3",
+    "ruff==0.2.1",
+    "mypy==1.8.0",
+]
+
+[tool.huak.task]
+main = "python3 src/openai_demo/main.py"
+simple = "python3 examples/simple.py"
+embed = "python3 examples/embed.py"
