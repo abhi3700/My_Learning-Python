@@ -1,3 +1,0 @@
-[submodule "rust-python"]
-	path = rust-python
-	url = https://github.com/abhi3700/rusty-python.git
