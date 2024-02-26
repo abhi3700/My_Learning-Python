@@ -2,7 +2,8 @@
 
 ## Description
 
-It is a `cargo`-like tool for python projects that helps in integrating Rust into python project.
+- It is a `cargo`-like tool for python projects that helps in integrating Rust into python project.
+- It can be combined with any project manager
 
 ## Install
 
@@ -61,6 +62,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -U pip maturin
 pip freeze
+# pip freeze > requirements.txt
 ```
 
 This would create a `.venv` folder that contains the virtual environment with all 'site-packages'.
@@ -170,6 +172,8 @@ Please input your guess.
 maturin build
 pip install target/wheels/guessing_game-0.1.0-cp38-abi3-macosx_11_0_arm64.whl
 ```
+
+Now, this can be integrated with other project management tools like `poetry`, `huak`, etc. My personal favourite is `huak` ❤️.
 
 ## Commands
 

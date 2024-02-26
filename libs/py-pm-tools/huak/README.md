@@ -141,6 +141,10 @@ Install `requirements.txt`:
 pip install -r requirements.txt
 ```
 
+## Integrate with Rust
+
+Follow this [boilerplate](https://github.com/abhi3700/rusty-py-boilerplate).
+
 ## References
 
 - [Github](https://github.com/cnpryer/huak/)
