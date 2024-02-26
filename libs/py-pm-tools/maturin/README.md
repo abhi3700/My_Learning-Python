@@ -173,7 +173,7 @@ maturin build
 pip install target/wheels/guessing_game-0.1.0-cp38-abi3-macosx_11_0_arm64.whl
 ```
 
-Now, this can be integrated with other project management tools like `poetry`, `huak`, etc. My personal favourite is `huak` ❤️.
+Now, this can be integrated with other project management tools like `poetry`, `huak`, etc. My personal favourite is `huak` ❤️. Refer to the [huak](../huak/README.md#integrate-with-rust) for more details.
 
 ## Commands
 
