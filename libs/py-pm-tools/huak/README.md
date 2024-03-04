@@ -99,6 +99,15 @@ $ huak run which python3
 
 > This would take 0.03s more than running `$ python3 src/demo/main.py` due to the overhead of `huak`. It is even worse with `poetry` (takes 0.6s vs standard 0.06s using `python3`).
 
+### Add/Remove dependency
+
+This is to add/remove dependencies to the project.
+
+```sh
+huak add <package-name>
+huak remove <package-name>
+```
+
 ### Test
 
 ```sh
