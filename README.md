@@ -161,7 +161,14 @@ No kernel found
 
   - M-2: Connect to a already running jupyter notebook kernel. Just run `$ jupyter notebook` command in the directory where the notebook is present.
 
-## Github Repositories
+## Repositories
+
+### Self
+
+- [Semantic Hashing Demo](https://github.com/abhi3700/semantic-hashing-demo)
+- [AutoPlot](https://github.com/abhi3700/AutoPlot)
+
+### Others
 
 - Python Algorithms - <https://github.com/TheAlgorithms/Python>
 - HackerRank Problems and Solutions - <https://github.com/juhilsomaiya/HackerRank-Python-Algorithm-Solution>
