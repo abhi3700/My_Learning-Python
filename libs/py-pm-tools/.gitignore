@@ -1,0 +1,6 @@
+.DS_Store
+*/__pycache/*
+requirements.lock
+requirements-dev.lock
+.python-version
+dist/
