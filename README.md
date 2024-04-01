@@ -40,18 +40,35 @@ Learn Python for using in the following domains:
 
 ### macOS
 
-1. python3 comes pre-installed in macOS. Check using `$ python3 --version` command.
-2. Install `pip` (aka `pip3`) using:
+1. python3 comes pre-installed in macOS via **Developer CommandLineTools**. Check using `$ python3 --version` command. Now, needs to superimpose using the python of `brew`.
+   1. Using `brew`, `$ brew install python@3.11`, we can have multiple python versions: `python3.12` or `python3.11` etc.
+   2. Update: `$ brew upgrade  python@3.11` to update python3.11. Similarly, `$ brew upgrade  python@3.12` for python3.12.
+2. Install `pip` (aka `pip3` for some python versions > 3) using your preferred `python3` version.
 
   ```sh
-  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-  python3 get-pip.py
+  python3.11 -m pip install --upgrade pip
   ```
 
-  > It is recommended to install the packages using `pip3` (not `conda`) (aka `pip`, found pointing to same **python3.x** version in their binary using `$ which pip or pip3` command) `pip list`.
+  > It is recommended to install the packages using `pip3` (not `conda`) (aka `pip`). And then check if installed using `pip3 list` or `pip list`.
 
-  In order to know which python3 version is linked to `pip` or `pip3`, use `$ pip --version` or `$ pip3 --version` command.
+  In order to know which python3 version is linked to which `pip` or `pip3`, use `$ pip --version` or `$ pip3 --version` command.
 
+  This is the result in my case:
+
+  ```sh
+  $ which pip
+  /opt/homebrew/bin/pip
+  $ pip --version                                                                                                                             ⏎
+  pip 24.0 from /opt/homebrew/lib/python3.11/site-packages/pip (python 3.11)
+
+  $ which pip3
+  /opt/homebrew/bin/pip3
+  $ pip3 --version
+  pip 24.0 from /opt/homebrew/lib/python3.12/site-packages/pip (python 3.12)
+  ```
+
+  This means `pip` is installed via `python3.11` (via brew). So, install/update via python3.11.
+  
 3. Project Management tool: `huak` is recommended, but `poetry` is also good, but 10x slow.
 
 4. <u>Editor</u>: VSC (Visual Studio Code)
@@ -61,12 +78,14 @@ Learn Python for using in the following domains:
      - [pylyzer](https://marketplace.visualstudio.com/items?itemName=pylyzer.pylyzer)
      - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) & many others.
 
-5. Enable Auto-complete suggestion: For enabling autocomplete suggestion, add this line in `settings.json`:
+3. Enable Auto-complete suggestion: For enabling autocomplete suggestion, add this line in `settings.json`:
 
   ```json
     "python.analysis.autoImportCompletions": true,
     "python.analysis.extraPaths": ["/opt/homebrew/lib/python3.11/site-packages"]
   ```
+
+---
   
 To uninstall, follow this:
 

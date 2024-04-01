@@ -2,6 +2,12 @@
 
 This is a demo of the OpenAI GPT-3 model. It is a language model that can generate human-like text. It takes a prompt and generates a response based on the prompt.
 
+## Build
+
+```sh
+huak build
+```
+
 ## Run
 
 ```sh

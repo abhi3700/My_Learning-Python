@@ -12,6 +12,7 @@ dependencies = [
     "pyarrow ==15.0.0",
     # Avoid warning adding this. Anyway, this would be added into `pandas` in v3.0.0.
     "tiktoken ==0.6.0",
+    "scikit-learn ==1.4.1.post1",
 ]
 
 [project.optional-dependencies]
@@ -27,3 +28,5 @@ simple = "python3 examples/simple.py"
 embed = "python3 examples/embed.py"
 embed_dim = "python3 examples/embed_dim.py"
 into_tokens = "python3 examples/into_tokens.py"
+lsh_rand = "python3 examples/lsh_rand.py"
+cos_sim = "python3 examples/cos_sim.py"

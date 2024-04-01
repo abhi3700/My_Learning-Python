@@ -1,0 +1,3 @@
+[workspace]
+members = ["libs/py-pm-tools/maturin/guessing-game"]
+resolver = "2"

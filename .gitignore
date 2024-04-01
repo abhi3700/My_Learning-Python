@@ -4,3 +4,10 @@
 .env
 test*
 .DS_Store
+target/
+.venv
+
+# ignore big data
+libs/openai/demo/data/Datafiniti_Hotel_Reviews.csv
+libs/openai/demo/data/fine_food_reviews_1k.csv
+libs/polars/data/fine_food_reviews_1k.csv

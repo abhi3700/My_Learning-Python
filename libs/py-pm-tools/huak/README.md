@@ -56,6 +56,8 @@ huak new demo --lib
 
 By default, it's a library. If you want to create an app, then use `--app` flag.
 
+If the `pyproject.toml` is already present, then `huak init` downloads the packages & installs into `./.venv/lib/python3.11/site-packages` folder so as to run `$ huak run <script_name>` smoothly.
+
 ### Build
 
 Build tarball and wheel for the project.
@@ -126,6 +128,23 @@ huak lint
 >
 > NOTE: `ruff` is way better than any tool that I know of for lint, format in Python. <br/>
 
+### Script
+
+> Run `huak init` to download the packages into  `/lib/python3.x`/site-packages
+
+```toml
+[tool.huak.task]
+counter = ".venv/bin/python3 src/flet_demo/counter.py"
+todo = ".venv/bin/python3 src/flet_demo/todo.py"
+```
+
+Now, you can run:
+
+```sh
+huak run counter
+huak run todo
+```
+
 ### Code quality
 
 ```sh
@@ -139,16 +158,28 @@ pylyzer src/demo/main.py
 Generate/Update `requirements.txt`:
 
 ```sh
-huak build
-huak activate
-pip freeze > requirements.txt
+huak freeze
 ```
 
-Install `requirements.txt`:
+I submitted a [PR](https://github.com/cnpryer/huak/pull/897) for this feature. One can install it via:
+
+1. M-1 | Using `pip`: `$ pip install git+https://github.com/abhi3700/huak@add-freeze-cmd#egg=huak`
+2. M-2 | In forked [`huak`](https://github.com/abhi3700/huak) repo, run `$ cp ./target/release/huak /usr/local/bin/` to copy into the folder which is added in `$PATH`.
+3. M-3 | Install via `cargo`: `$ cargo install --path <path/to/project/cargo.toml>`
+
+---
+
+Now, one can install (globally) packages from the generated `requirements.txt` & run Jupyter in their local kernel containing the installed packages (thereby without using `huak` as it is for project management unlike Jupyter notebook):
 
 ```sh
 pip install -r requirements.txt
 ```
+
+## My projects
+
+Projects done with `huak`:
+
+- [Semantic Hashing Demo](https://github.com/abhi3700/semantic-hashing-demo)
 
 ## Integrate with Rust
 

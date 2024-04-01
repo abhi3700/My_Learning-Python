@@ -24,7 +24,7 @@ def closeness_of_two_queries(q1, q2):
     Maths: dot product of two embeddings is the cosine similarity. In maths & physics, dot product is used
     to capture the notion of how much one vector goes in the direction of another.
 
-    The embeddings vectors were deterministic 🤔.
+    The embeddings vectors were deterministic.
 
     Tested with 2 exact same queries, the dot product was 0.99999999..
     """

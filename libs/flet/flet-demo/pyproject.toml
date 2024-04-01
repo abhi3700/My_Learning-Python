@@ -12,7 +12,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "build==1.2.1",
+    "build ==1.2.1",
 ]
 
 [tool.huak.task]
