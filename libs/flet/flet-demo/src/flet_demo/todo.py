@@ -1,7 +1,7 @@
 """ 
 huak run todo
 """
-import flet
+import flet as ft
 from flet import (
     Checkbox,
     Column,
@@ -161,5 +161,5 @@ def main(page: Page):
     page.add(app)
 
 
-# flet.app(target=main)
-flet.app(target=main, view=flet.AppView.WEB_BROWSER)
+# ft.app(target=main)
+ft.app(target=main, view=ft.AppView.FLET_APP_WEB)

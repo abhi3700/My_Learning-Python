@@ -7,7 +7,7 @@ name = "flet-demo"
 version = "0.0.1"
 description = ""
 dependencies = [
-    "flet ==0.21.2",
+    "flet ==0.22.0",
 ]
 
 [project.optional-dependencies]
